@@ -1689,3 +1689,32 @@
 		padding: 13px 25px;
 	}
 }
+// Dynamic logo sizing tied to header state
+.wpo-site-header .navbar-header .navbar-brand {
+  display: flex;
+  align-items: center;
+
+  .brand-logo {
+    position: relative;
+    height: 100px; // default header logo height (increased)
+    width: 240px; // container width to preserve aspect ratio with object-fit
+  }
+}
+
+.fixed-navbar.active .wpo-site-header .navbar-header .navbar-brand .brand-logo {
+  height: 72px; // slightly smaller when sticky header is active
+}
+
+@media(max-width: 991px) {
+  .wpo-site-header .navbar-header .navbar-brand .brand-logo {
+    height: 76px;
+    width: 200px;
+  }
+}
+
+@media(max-width: 575px) {
+  .wpo-site-header .navbar-header .navbar-brand .brand-logo {
+    height: 64px;
+    width: 170px;
+  }
+}

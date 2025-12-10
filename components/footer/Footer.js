@@ -54,9 +54,10 @@ const Footer = (props) => {
                                 </div>
                                 <div className="contact-ft">
                                     <ul>
-                                        <li><i className="fi flaticon-location"></i>7 Green Lake Street Crawfordsville, IN 47933</li>
-                                        <li><i className="fi flaticon-phone-call"></i>+1 800 123 456 789</li>
-                                        <li><i className="fi flaticon-send"></i>Plumco@gmail.com</li>
+                                        <li><i className="fi flaticon-location"></i>417 S.Associated Rd. Brea Ca. 92821</li>
+                                        <li><i className="fi flaticon-phone-call"></i>714-863-5486</li>
+                                        <li><i className="fi flaticon-send"></i>Mike@mbplumbingservices.net</li>
+                                        <li><i className="fi flaticon-calendar"></i>Open 24/7</li>
                                     </ul>
                                 </div>
                             </div>
