@@ -46,7 +46,7 @@ const Appointment = () => {
         <section className="wpo-contact-section section-padding">
             <div className="wpo-contact-img">
                 <img src='/images/contact.jpg' alt="" />
-                <VideoModal />
+                <VideoModal iframeSrc="https://www.youtube.com/embed/ScMzIvxBSi4" iframeTitle="Intro Video" />
             </div>
             <div className="wpo-contact-img-s2">
                 <img src='/images/contact.png' alt="" />

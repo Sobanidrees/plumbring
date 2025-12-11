@@ -17,7 +17,10 @@ const ProjectSection = () => {
             <div className="container">
                 <div className="row align-items-center justify-content-center">
                     <div className="col-lg-6">
-                        <SectionTitle MainTitle={'Our Latest Project'} />
+                        <SectionTitle 
+                            MainTitle={'Our Latest Project'} 
+                            Description={'See how we solve real plumbing challenges—precise repairs, clean installs, and upgrades that last.'}
+                        />
                     </div>
                 </div>
                 <div className="row">
@@ -32,7 +35,7 @@ const ProjectSection = () => {
                                         <div className="hover-content">
                                             <div className="details">
                                                 <h3><Link onClick={ClickHandler} href='/project/[slug]' as={`/project/${project.slug}`}>{project.title}</Link></h3>
-                                                <p>{project.subTitle}</p>
+                                                <p>{project.description}</p>
                                             </div>
                                         </div>
                                     </div>
