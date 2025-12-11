@@ -13,7 +13,10 @@ const TeamSection = (props) => {
             <div className="container">
                 <div className="row align-items-center justify-content-center">
                     <div className="col-lg-6">
-                        <SectionTitle MainTitle={'Dedicated Member'} />
+                        <SectionTitle 
+                            MainTitle={'Dedicated Member'} 
+                            Description={'Reliable, certified plumbers—quality work every time.'}
+                        />
                     </div>
                 </div>
                 <div className="wpo-team-wrap">
@@ -34,6 +37,7 @@ const TeamSection = (props) => {
                                     <div className="wpo-team-text">
                                         <h2><Link onClick={ClickHandler} href='/team-single/[slug]' as={`/team-single/${team.slug}`}>{team.name}</Link></h2>
                                         <span>{team.title}</span>
+                                        {team.description && <p>{team.description}</p>}
                                     </div>
                                 </div>
                             </div>

@@ -94,7 +94,7 @@ const Footer = (props) => {
                 <div className="container">
                     <div className="row">
                         <div className="col col-xs-12">
-                            <p className="copyright"> Copyright &copy; 2022 Plumco by <Link onClick={ClickHandler} href="/">wpOceans</Link>. All Rights Reserved.</p>
+                            <p className="copyright"> Copyright &copy; 2025 mb Plumbing. All Rights Reserved.</p>
                         </div>
                     </div>
                 </div>

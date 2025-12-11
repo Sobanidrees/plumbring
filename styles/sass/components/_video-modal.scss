@@ -55,7 +55,8 @@
   inset: 0;
   background: rgba(10, 12, 16, 0.7);
   backdrop-filter: blur(2px);
-  z-index: 9999;
+  /* Ensure overlay is above any site header/nav */
+  z-index: 1000000;
 }
 
 .modal__align {
@@ -63,7 +64,7 @@
   display: grid;
   place-items: center;
   padding: 24px;
-  z-index: 10000;
+  z-index: 1000001;
 }
 
 .modal__content {
@@ -73,17 +74,30 @@
   background: #0f1217;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
   overflow: hidden;
-  aspect-ratio: 16 / 9;
-  z-index: 10001;
+  /* Avoid relying solely on aspect-ratio for broader browser support */
+  /* aspect-ratio: 16 / 9; */
+  /* Height will be defined by the padding hack below */
+  z-index: 1000002;
 }
 
 .modal__video-align {
   position: relative;
-  z-index: 10001;
+  width: 100%;
+  /* Ratio-based height fallback for browsers lacking aspect-ratio support */
+  /* 16:9 ratio => 9 / 16 = 56.25% */
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+  }
+  z-index: 1000002;
 }
 
 .modal__video-style {
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: #000;

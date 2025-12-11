@@ -27,6 +27,28 @@ const funFact = [
 
 
 const FunFact = (props) => {
+    const [reviewInView, setReviewInView] = React.useState(false);
+    const reviewRef = React.useRef(null);
+
+    React.useEffect(() => {
+        if (!reviewRef.current) return;
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setReviewInView(true);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.3 }
+        );
+        observer.observe(reviewRef.current);
+        return () => observer.disconnect();
+    }, []);
+
+    const stars = ['fa fa-star', 'fa fa-star', 'fa fa-star', 'fa fa-star', 'fa fa-star-o'];
+
     return (
         <section className="wpo-fun-fact-section section-padding">
             <div className="container">
@@ -34,17 +56,25 @@ const FunFact = (props) => {
                     <div className="col-lg-5">
                         <div className="wpo-funfacts-text">
                             <h3>We Are Provide Always Different From Other Services.</h3>
-                            <div className="customer-review">
-                                <h2>89K</h2>
+                            <div ref={reviewRef} className={`customer-review ${reviewInView ? 'animated fadeInUp' : ''}`}>
+                                <h2 className={reviewInView ? 'animated fadeIn' : ''} style={reviewInView ? { animationDuration: '800ms' } : {}}>
+                                    89K
+                                </h2>
                                 <div className="reviews">
                                     <ul>
-                                        <li><i className="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i className="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i className="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i className="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i className="fa fa-star-o" aria-hidden="true"></i></li>
+                                        {stars.map((cls, idx) => (
+                                            <li
+                                                key={idx}
+                                                className={reviewInView ? 'animated bounceIn' : ''}
+                                                style={reviewInView ? { animationDelay: `${idx * 0.12}s`, animationDuration: '500ms' } : {}}
+                                            >
+                                                <i className={cls} aria-hidden="true"></i>
+                                            </li>
+                                        ))}
                                     </ul>
-                                    <span>Customer Review</span>
+                                    <span className={reviewInView ? 'animated fadeInUp' : ''} style={reviewInView ? { animationDelay: '0.4s' } : {}}>
+                                        Customer Review
+                                    </span>
                                 </div>
                             </div>
                         </div>
