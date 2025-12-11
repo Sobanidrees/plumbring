@@ -1,6 +1,5 @@
 import React from 'react'
 import Services from '../../api/service'
-import Link from 'next/link'
 
 
 const ServiceSection2 = (props) => {
@@ -30,7 +29,7 @@ const ServiceSection2 = (props) => {
                                     <img src={service.sIcon} alt=""/>
                                 </div>
                                 <div className="wpo-service-text">
-                                    <h2><Link onClick={ClickHandler} href='/service/[slug]' as={`/service/${service.slug}`}>{service.sTitle}</Link></h2>
+                                    <h2><span>{service.sTitle}</span></h2>
                                     <p>{service.description}</p>
                                 </div>
                                 <div className="visible-icon">

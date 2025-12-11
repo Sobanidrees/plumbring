@@ -1,6 +1,5 @@
 import React from 'react'
 import Services from '../../../api/service';
-import Link from  'next/link'
 
 const ServiceSidebar = (props) => {
 
@@ -28,7 +27,7 @@ const ServiceSidebar = (props) => {
                     <h3>Post Categories</h3>
                     <ul>
                         {Services.slice(0,6).map((service, Sitem) => (
-                            <li key={Sitem}><Link onClick={ClickHandler} href='/service/[slug]' as={`/service/${service.slug}`}>{service.sTitle}</Link></li>
+                            <li key={Sitem}><span>{service.sTitle}</span></li>
                         ))}
                     </ul>
                 </div>
