@@ -8,7 +8,6 @@ import FunFact from '../../components/FunFact/FunFact';
 import Testimonial from '../../components/Testimonial/Testimonial';
 import ServiceSection from '../../components/ServiceSection/ServiceSection';
 import TeamSection from '../../components/TeamSection/TeamSection';
-import BlogSection from '../../components/BlogSection/BlogSection';
 
 const AboutPage = (props) => {
 
@@ -21,7 +20,6 @@ const AboutPage = (props) => {
             <FunFact/> 
             <TeamSection/> 
             <Testimonial/> 
-            <BlogSection/> 
             <Footer/>
             <Scrollbar />
         </div>

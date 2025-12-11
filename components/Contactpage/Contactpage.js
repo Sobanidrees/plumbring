@@ -20,7 +20,7 @@ const Contactpage = () => {
                                         </div>
                                         <div className="office-info-text">
                                             <h2>Address</h2>
-                                            <p>7 Green Lake Street Crawfordsville, IN 47933</p>
+                                            <p>417 S.Associated Rd. Brea Ca. 92821</p>
                                         </div>
                                     </div>
                                 </div> 
@@ -33,8 +33,7 @@ const Contactpage = () => {
                                         </div>
                                         <div className="office-info-text">
                                             <h2>Email Us</h2>
-                                            <p>Plumco@gmail.com</p>
-                                            <p>helloyou@gmail.com</p>
+                                            <p>Mike@mbplumbingservices.net</p>
                                         </div>
                                     </div>
                                 </div> 
@@ -47,8 +46,8 @@ const Contactpage = () => {
                                         </div>
                                         <div className="office-info-text">
                                             <h2>Call Now</h2>
-                                            <p>+1 800 123 456 789</p>
-                                            <p>+1 800 123 654 987</p>
+                                            <p>714-863-5486</p>
+                                            <p>Open 24/7</p>
                                         </div>
                                     </div>
                                 </div> 
