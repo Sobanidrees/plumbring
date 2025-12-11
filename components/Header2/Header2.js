@@ -54,67 +54,16 @@ const Header2 = (props) => {
                                 <div id="navbar" className="collapse navbar-collapse navigation-holder">
                                     <button className="menu-close"><i className="ti-close"></i></button>
                                     <ul className="nav navbar-nav mb-2 mb-lg-0">
-                                        <li className="menu-item-has-children">
-                                            <Link onClick={ClickHandler} href="/">Home</Link>
-                                            <ul className="sub-menu">
-                                                <li><Link onClick={ClickHandler} href="/home">Home style 1</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/home2">Home style 2</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/home3">Home style 3</Link></li>
-                                            </ul>
+                                        <li>
+                                            <Link onClick={ClickHandler} href="/home">Home</Link>
                                         </li>
                                         <li><Link onClick={ClickHandler} href="/about">About</Link></li>
-                                        <li className="menu-item-has-children">
-                                            <Link href="/service">Services</Link>
-                                            <ul className="sub-menu">
-                                                <li><Link onClick={ClickHandler} href="/service">Service</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/service-s2">Service style 2</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/service/Water-Line-Repair">Service Single</Link></li>
-                                            </ul>
+                                        <li>
+                                            <Link onClick={ClickHandler} href="/service">Services</Link>
                                         </li>
-                                        <li className="menu-item-has-children">
-                                            <Link href="/shop">Shop</Link>
-                                            <ul className="sub-menu">
-                                                <li><Link onClick={ClickHandler} href="/shop">Shop Page</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/product-single/Mixing-Valves">Shop Single</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/cart">Cart</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/checkout">Checkout</Link></li>
-                                            </ul>
-                                        </li>
-                                        <li className="menu-item-has-children">
-                                            <Link href="/project">Pages</Link>
-                                            <ul className="sub-menu">
-                                                <li><Link onClick={ClickHandler} href="/project">Project</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/project/Basement-Plumbing">Project Single</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/team">Team</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/team-single/Mattie-Washington">Team Single</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/appointment">Appointment</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/terms">Terms & Conditions</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/testimonial">Testimonial</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/pricing">Pricing</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/404">Error 404</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/login">Login</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/register">Register</Link></li>
-                                            </ul>
-                                        </li>
-                                        <li className="menu-item-has-children">
-                                            <Link onClick={ClickHandler} href="/blog">Blog</Link>
-                                            <ul className="sub-menu">
-                                                <li><Link onClick={ClickHandler} href="/blog">Blog right sidebar</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/blog-left-sidebar">Blog left sidebar</Link></li>
-                                                <li><Link onClick={ClickHandler} href="/blog-fullwidth">Blog fullwidth</Link></li>
-                                                <li className="menu-item-has-children">
-                                                    <Link onClick={ClickHandler} href="/">Blog details</Link>
-                                                    <ul className="sub-menu">
-                                                        <li><Link onClick={ClickHandler} href="/blog-single/uses-dictionary">Blog details right sidebar</Link>
-                                                        </li>
-                                                        <li><Link onClick={ClickHandler} href="/blog-single-left-sidebar/uses-dictionary">Blog details left
-                                                            sidebar</Link></li>
-                                                        <li><Link onClick={ClickHandler} href="/blog-single-fullwidth/uses-dictionary">Blog details
-                                                            fullwidth</Link></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
+                                        
+                                        
+                                        
                                         <li><Link onClick={ClickHandler} href="/contact">Contact</Link></li>
                                     </ul>
 

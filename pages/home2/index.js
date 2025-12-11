@@ -10,7 +10,6 @@ import Scrollbar from '../../components/scrollbar/scrollbar';
 import Appointment from '../../components/Appointment/Appointment';
 import Footer from '../../components/footer/Footer';
 import Testimonial from '../../components/Testimonial/Testimonial';
-import BlogSection from '../../components/BlogSection/BlogSection';
 
 
 
@@ -27,7 +26,7 @@ const HomePage2 = (props) => {
             <TeamSection />
             <Appointment />
             <Testimonial />
-            <BlogSection />
+            
             <Footer />
             <Scrollbar/>
         </div>
