@@ -529,8 +529,14 @@ wpo-projects
             }
 
             .img-holder{
+                position: relative;
+                overflow: hidden;
+                aspect-ratio: 4 / 3;
                 img{
                     width: 100%;
+                    height: 100%;
+                    display: block;
+                    object-fit: cover;
                 }
             }
         }

@@ -1,0 +1,112 @@
+// Video Modal popup styles
+
+.v-modal-area {
+  .video-btn {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+      }
+    }
+    .wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ff7a18 0%, #af002d 100%);
+      color: #fff;
+      border: none;
+      box-shadow: 0 10px 20px rgba(175, 0, 45, 0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      cursor: pointer;
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px rgba(175, 0, 45, 0.45);
+      }
+      i {
+        font-size: 22px;
+        line-height: 1;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        box-shadow: 0 0 0 0 rgba(175, 0, 45, 0.4);
+        animation: pulse 1.8s infinite cubic-bezier(0.66, 0, 0, 1);
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(175, 0, 45, 0.35); }
+  70% { box-shadow: 0 0 0 24px rgba(175, 0, 45, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(175, 0, 45, 0); }
+}
+
+.modal__bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 12, 16, 0.7);
+  backdrop-filter: blur(2px);
+  z-index: 9999;
+}
+
+.modal__align {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  z-index: 10000;
+}
+
+.modal__content {
+  position: relative;
+  width: min(920px, 100%);
+  border-radius: 14px;
+  background: #0f1217;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  z-index: 10001;
+}
+
+.modal__video-align {
+  position: relative;
+  z-index: 10001;
+}
+
+.modal__video-style {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  object-fit: cover;
+}
+
+.modal__bg .close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #1a1a1a;
+  border: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  z-index: 10002;
+  i { font-size: 16px; }
+  &:hover { transform: scale(1.05); }
+}

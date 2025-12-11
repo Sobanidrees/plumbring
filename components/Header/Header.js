@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Link from "next/link";
+import Image from "next/image";
 import HeaderTopbar from '../HeaderTopbar/HeaderTopbar'
 import MobileMenu from '../MobileMenu/MobileMenu'
 
@@ -28,8 +29,18 @@ const Header = (props) => {
                             </div>
                             <div className="col-lg-3 col-md-6 col-6">
                                 <div className="navbar-header">
-                                    <Link onClick={ClickHandler} href="/home" className="navbar-brand"><img src='/images/logo.png'
-                                        alt="" /></Link>
+                                    <Link onClick={ClickHandler} href="/home" className="navbar-brand">
+                                        <div className="brand-logo">
+                                            <Image
+                                                src={props.Logo || "/images/logo.png"}
+                                                alt="Plumbring logo"
+                                                fill
+                                                sizes="(max-width: 991px) 200px, 240px"
+                                                priority
+                                                style={{ objectFit: 'contain' }}
+                                            />
+                                        </div>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="col-lg-7 col-md-1 col-1">

@@ -481,3 +481,19 @@
         top: 17%;
     }
 }
+// Uniform sizing for related projects gallery images
+.wpo-project-area-s2 {
+  .project-grids {
+    .wpo-project-img {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+    }
+  }
+}
