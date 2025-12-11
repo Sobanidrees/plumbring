@@ -14,6 +14,10 @@ export default class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
           <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></link>
+          {/* Favicon */}
+          <link rel="icon" type="image/png" href="/favicon.png" />
+          <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+          <link rel="apple-touch-icon" href="/favicon.png" />
         </Head>
         <body>
           <Main />

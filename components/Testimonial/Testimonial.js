@@ -82,7 +82,10 @@ const Testimonial = () => {
             <div className="container">
                 <div className="row align-items-center justify-content-center">
                     <div className="col-lg-6">
-                        <SectionTitle MainTitle={'What People’s Say'} />
+                        <SectionTitle 
+                            MainTitle={'What People’s Say'} 
+                            Description={'Real feedback from homeowners and businesses we’ve helped—emergency leaks fixed fast, drains cleared, water heaters installed, and routine maintenance done right. Trusted plumbing service with transparent pricing and dependable results.'}
+                        />
                     </div>
                 </div>
                 <div className="row align-items-center">
