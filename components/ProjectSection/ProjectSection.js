@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Projects from '../../api/project'
-import Link from "next/link";
 import SectionTitle from "../SectionTitle";
 
 const ClickHandler = () => {
@@ -32,9 +31,9 @@ const ProjectSection = () => {
                                         <div className="img-holder">
                                             <img className="img-responsive" src={project.pImg} alt="" />
                                         </div>
-                                        <div className="hover-content">
+                                            <div className="hover-content">
                                             <div className="details">
-                                                <h3><Link onClick={ClickHandler} href='/project/[slug]' as={`/project/${project.slug}`}>{project.title}</Link></h3>
+                                                <h3><span>{project.title}</span></h3>
                                                 <p>{project.description}</p>
                                             </div>
                                         </div>
