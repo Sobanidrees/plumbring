@@ -160,37 +160,53 @@ hero slider
 	height: 1050px;
 	position: relative;
 	display: block;
+	overflow: hidden;
 
 
 	&:before {
 		display: none;
 	}
 
-	.right-vec {
-		z-index: 1;
+		.right-vec {
+			z-index: 1;
 
-		.right-img {
-			left: auto;
-			right: 0;
-			position: absolute;
-			z-index: -11;
-			background: none;
+			.right-img {
+				left: auto;
+				right: 0;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				height: 100%;
+				display: flex;
+				align-items: center; // vertically center within hero height
+				justify-content: flex-end;
+				width: clamp(320px, 40vw, 640px);
+				overflow: hidden;
+				z-index: -11;
+				background: none;
 
 			@media(max-width:991px) {
 				display: none;
 			}
 
-			.r-img {
-				position: absolute;
-				top: 55%;
-				transform: translateY(-50%);
-				z-index: 1;
+				.r-img {
+					position: relative; // participate in flex centering
+					z-index: 1;
+					// limit overall image area so it doesn’t blend with buttons
+					max-height: 80%;
+					max-width: 100%;
+					margin-right: 0;
 
 				@media(max-width:1300px) {
-					top: 65%;
+					max-height: 75%;
 				}
 
 				img {
+					display: block;
+					max-width: 100%;
+					height: auto;
+					max-height: 100%;
+					object-fit: contain;
 					@media(max-width:991px) {
 						display: none;
 					}
