@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Services from '../../../api/service';
 
 const ServiceSidebar = (props) => {
@@ -12,22 +13,15 @@ const ServiceSidebar = (props) => {
      }
 
     return (
-        <div className="col-lg-4 col-md-8">
-            <div className="blog-sidebar">
-                <div className="widget search-widget">
-                    <h3>Search Here</h3>
-                    <form onSubmit={SubmitHandler}>
-                        <div>
-                            <input type="text" className="form-control" placeholder="Search Post.."/>
-                            <button type="submit"><i className="ti-search"></i></button>
-                        </div>
-                    </form>
-                </div>
-                <div className="widget category-widget">
-                    <h3>Post Categories</h3>
+        <div className="col-lg-4 col-md-8 order-lg-1 order-md-2 order-2">
+            <div className="wpo-single-sidebar">
+                <div className="wpo-service-widget widget">
+                    <h2>All Services</h2>
                     <ul>
-                        {Services.slice(0,6).map((service, Sitem) => (
-                            <li key={Sitem}><span>{service.sTitle}</span></li>
+                        {Services.map((service, Sitem) => (
+                            <li key={Sitem}>
+                                <Link href={`/service/${service.slug}`} onClick={ClickHandler}>{service.sTitle}</Link>
+                            </li>
                         ))}
                     </ul>
                 </div>

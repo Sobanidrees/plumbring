@@ -66,7 +66,7 @@ const Features = (props) => {
                                             animationFillMode: inView ? 'both' : undefined,
                                         }}
                                     >
-                                        Book Online
+                                        On-Time Arrival
                                     </h4>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@ const Features = (props) => {
                                             animationFillMode: inView ? 'both' : undefined,
                                         }}
                                     >
-                                        We Arrive
+                                        Upfront Pricing
                                     </h4>
                                 </div>
                             </div>
@@ -158,7 +158,7 @@ const Features = (props) => {
                                             animationFillMode: inView ? 'both' : undefined,
                                         }}
                                     >
-                                        Solve Problem
+                                        Clean, Respectful Work
                                     </h4>
                                 </div>
                             </div>

@@ -1,0 +1,88 @@
+/*--------------------------------------------------------------
+Schedule Service Page — modern cards
+--------------------------------------------------------------*/
+
+.wpo-schedule-section {
+  .wpo-section-title {
+    h2 { font-family: $heading-font; font-weight: 800; letter-spacing: -0.01em; }
+    p { font-family: $base-font; font-size: 18px; color: $body-color; }
+  }
+
+  .schedule-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+
+    @media(max-width:1200px){ grid-template-columns: repeat(2, minmax(0,1fr)); }
+    @media(max-width:767px){ grid-template-columns: 1fr; }
+  }
+
+  .schedule-card {
+    position: relative;
+    background: $white;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(33,33,33,0.08);
+    overflow: hidden;
+    transition: transform .25s ease, box-shadow .25s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0px 14px 34px rgba(33,33,33,0.12);
+    }
+
+    .badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: $theme-primary-color;
+      color: $white;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 10px;
+      border-radius: 999px;
+      z-index: 2;
+    }
+
+    .card-media {
+      height: 180px;
+      overflow: hidden;
+      img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    }
+
+    .card-body {
+      padding: 22px;
+      .card-title-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+      .card-icon { width: 26px; height: 26px; object-fit: contain; }
+      h3 { font-family: $heading-font; font-weight: 800; font-size: 22px; margin: 0; color: $heading-color; }
+      p { font-family: $base-font; font-size: 16px; line-height: 1.7; color: $body-color; margin-bottom: 16px; }
+      .card-list { list-style: none; padding: 0; margin: 0 0 16px; }
+      .card-list li { position: relative; padding-left: 20px; font-size: 15px; line-height: 1.6; color: $dark-gray; margin-bottom: 8px; }
+      .card-list li:before { content: '\2713'; position: absolute; left: 0; top: 0; color: $theme-primary-color; font-weight: 700; }
+      .card-actions { display: flex; gap: 12px; align-items: center; }
+      .theme-btn { border-radius: 8px; }
+    }
+  }
+
+  .schedule-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+
+    @media(max-width:991px){ grid-template-columns: repeat(2, minmax(0,1fr)); }
+    @media(max-width:575px){ grid-template-columns: 1fr; }
+
+    .highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 16px;
+      background: $section-bg-color;
+      border-radius: 16px;
+
+      img { width: 36px; height: 36px; object-fit: contain; }
+      h6 { font-family: $heading-font; font-size: 16px; font-weight: 700; margin: 0; }
+      span { font-family: $base-font; font-size: 14px; color: $body-color; }
+    }
+  }
+}

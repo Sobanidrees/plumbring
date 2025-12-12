@@ -4,7 +4,9 @@
 .wpo-features-section,
 .wpo-features-section-s2{
     background: $white;
-    margin-top: -150px;
+    // Light overlap so circles visually align with hero curve
+    margin-top: -100px;
+    padding-top: 40px;
     z-index: 11;
     position: relative;
 
@@ -34,10 +36,18 @@
 
     .wpo-features-wrap{
        position: relative;
-       top: -150px;
+       top: -70px; // lift items slightly onto the curve
+
+       @media(max-width:1199px){
+         top: -60px;
+       }
 
        @media(max-width:991px){
-        top: 0px;
+         top: -30px;
+       }
+
+       @media(max-width:767px){
+         top: 0;
        }
     }
 
@@ -105,6 +115,21 @@
             }
         }
       }
+    }
+
+    // Responsive spacing so overlap never hides hero buttons
+    @media(max-width:1199px){
+        margin-top: -80px;
+    }
+
+    @media(max-width:991px){
+        margin-top: -40px;
+        padding-top: 50px;
+    }
+
+    @media(max-width:767px){
+        margin-top: 0;
+        padding-top: 60px;
     }
     .col{
         position: relative;
@@ -274,9 +299,12 @@
             }
 
             h2{
-                font-size: 28px;
-                font-weight: 700;
-                margin-bottom: 20px;
+                font-family: $heading-font;
+                font-size: 30px;
+                line-height: 1.25;
+                letter-spacing: -0.01em;
+                font-weight: 800;
+                margin-bottom: 16px;
                 a{
                     color: $dark-gray;
                     &:hover{
@@ -285,15 +313,20 @@
                 }
 
                 @media(max-width:1200px){
-                    font-size: 20px;
+                    font-size: 22px;
                     font-weight: 700;
                     margin-bottom: 10px;
                 }
             }
             p{
-                margin-bottom: 25px;
+                font-family: $base-font;
+                font-size: 17px;
+                line-height: 1.7;
+                color: $body-color;
+                margin-bottom: 20px;
 
                 @media(max-width:1200px){
+                    font-size: 16px;
                     margin-bottom: 15px;
                 }
             }

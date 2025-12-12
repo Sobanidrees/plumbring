@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import HeaderTopbar from '../HeaderTopbar/HeaderTopbar'
 import MobileMenu from '../MobileMenu/MobileMenu'
+import Services from '../../api/service'
 
 
 const Header = (props) => {
@@ -51,8 +52,17 @@ const Header = (props) => {
                             <Link onClick={ClickHandler} href="/home">Home</Link>
                         </li>
                         <li><Link onClick={ClickHandler} href="/about">About</Link></li>
-                        <li>
+                        <li className="menu-item-has-children">
                             <Link onClick={ClickHandler} href="/service">Services</Link>
+                            <ul className="sub-menu">
+                                {Services.map((service, idx) => (
+                                    <li key={idx}>
+                                        <Link onClick={ClickHandler} href={`/service/${service.slug}`}>
+                                            {service.sTitle}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
                         </li>
                         
                                         
