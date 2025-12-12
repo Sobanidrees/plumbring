@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Services from '../../api/service'
 
 
@@ -25,11 +26,17 @@ const ServiceSection2 = (props) => {
                     {Services.map((service, sitem) => (
                         <div className="col-lg-4 col-md-6 col-12" key={sitem}>
                             <div className="wpo-service-item">
-                                <div className="wpo-service-img">
-                                    <img src={service.sIcon} alt=""/>
-                                </div>
+                                <Link href={`/service/${service.slug}`}>
+                                    <div className="wpo-service-img">
+                                        <img src={service.sIcon} alt=""/>
+                                    </div>
+                                </Link>
                                 <div className="wpo-service-text">
-                                    <h2><span>{service.sTitle}</span></h2>
+                                    <h2>
+                                        <Link href={`/service/${service.slug}`}>
+                                            <span>{service.sTitle}</span>
+                                        </Link>
+                                    </h2>
                                     <p>{service.description}</p>
                                 </div>
                                 <div className="visible-icon">

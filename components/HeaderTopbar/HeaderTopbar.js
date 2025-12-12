@@ -16,7 +16,7 @@ const HeaderTopbar = () => {
                     <div className="col col-lg-5 col-md-7 col-sm-12 col-12">
                         <div className="contact-info">
                             <ul>
-                                <li><a legacyBehavior href="tel:+17148635486"><i><img src='/images/icon/2.png' alt=""/></i> 714-863-5486</a></li>
+                                <li><a href="tel:+17148635486"><i><img src='/images/icon/2.png' alt=""/></i> 714-863-5486</a></li>
                                 <li className='lan-sec'>
                                     <select name="" id="">
                                         <option value="">English</option>

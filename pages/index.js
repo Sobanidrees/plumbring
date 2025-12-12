@@ -3,9 +3,12 @@ import Navbar from '../components/Navbar/Navbar';
 import Hero from '../components/hero/Hero';
 import Features from '../components/Features/Features';
 import WorkSection from '../components/WorkSection/WorkSection';
-import ServiceSection from '../components/ServiceSection/ServiceSection';
+import HomeServicesGrid from '../components/HomeServicesGrid/HomeServicesGrid';
+import WhyChoose from '../components/WhyChoose/WhyChoose';
 import FunFact from '../components/FunFact/FunFact';
 import ProjectSection from '../components/ProjectSection/ProjectSection';
+import ServiceAreas from '../components/ServiceAreas/ServiceAreas';
+import CTA from '../components/CTA/CTA';
 import TeamSection from '../components/TeamSection/TeamSection';
 import Scrollbar from '../components/scrollbar/scrollbar';
 import Appointment from '../components/Appointment/Appointment';
@@ -22,10 +25,13 @@ const HomePage = (props) => {
             <Hero />
             <Features />
             <WorkSection />
-            <ServiceSection />
+            <HomeServicesGrid />
+            <WhyChoose />
+            <ServiceAreas />
             <FunFact />
             <ProjectSection />
             <TeamSection />
+            <CTA />
             <Appointment />
             <Testimonial />
             

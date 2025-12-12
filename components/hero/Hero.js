@@ -10,13 +10,13 @@ const Hero = () => {
                     <div className="col col-xl-4 col-lg-5 col-12">
                         <div className="wpo-hero-section-text">
                             <div className="wpo-hero-subtitle">
-                                <span>:: Highly Trained Staff </span>
+                                <span>:: Local Plumbing Pros</span>
                             </div>
                             <div className="wpo-hero-title">
-                                <h2>Ready For <span>Help</span> You.</h2>
+                                <h2>Fast, Reliable Plumbing — <span>Done Right</span>.</h2>
                             </div>
                             <div className="wpo-hero-des">
-                                <p>We are certified company. We provide best plumbing services for you & your company .
+                                <p>Same-day service, honest pricing, and spotless work from certified plumbers.
                                 </p>
                             </div>
                             <div className="btns">
@@ -25,9 +25,7 @@ const Hero = () => {
                                         <Link href="/appointment" className="btn theme-btn">BOOK ONLINE</Link>
                                     </li>
                                     <li>
-                                        <div className="video-holder">
-                                            <VideoModal/>
-                                        </div>
+                                        <Link href="tel:+17148635486" className="btn theme-btn-s2">Call 714-863-5486</Link>
                                     </li>
                                 </ul>
                             </div>

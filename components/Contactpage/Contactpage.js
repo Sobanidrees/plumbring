@@ -7,6 +7,14 @@ const Contactpage = () => {
     return(
         <section className="wpo-contact-pg-section section-padding">
             <div className="container">
+                <div className="row align-items-center justify-content-center">
+                    <div className="col-lg-8">
+                        <div className="wpo-section-title">
+                            <h2>Get Fast, Friendly Support</h2>
+                            <p>Call 714-863-5486 or book online—available for emergencies and same-day service.</p>
+                        </div>
+                    </div>
+                </div>
                 <div className="row">
                     <div className="col col-lg-10 offset-lg-1">
                         <div className="office-info">

@@ -161,10 +161,35 @@ hero slider
 	position: relative;
 	display: block;
 	overflow: hidden;
+	// Ensure hero content sits above overlapping sections (e.g., Features)
+	z-index: 1;
 
 
 	&:before {
 		display: none;
+	}
+
+	// Curved white transition at the bottom of banner
+	&:after {
+		content: '';
+		position: absolute;
+		left: -10%;
+		bottom: -110px; // lift curve into hero
+		width: 120%;
+		height: 240px;
+		background: $white;
+		border-radius: 50%;
+		z-index: 0; // keep curve below Features to avoid clipping
+
+		@media(max-width:991px){
+			bottom: -90px;
+			height: 200px;
+		}
+
+		@media(max-width:575px){
+			bottom: -70px;
+			height: 160px;
+		}
 	}
 
 		.right-vec {
@@ -216,11 +241,22 @@ hero slider
 			img {
 				width: 100%;
 				height: unset;
-			}
-
 		}
 
 	}
+
+	// Keep call-to-action buttons visible above any overlapping elements
+	.wpo-hero-section-text {
+		position: relative;
+		z-index: 30;
+
+		.btns {
+			position: relative;
+			z-index: 35;
+		}
+	}
+
+}
 
 
 }

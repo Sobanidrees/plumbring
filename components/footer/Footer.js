@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from "next/link";
 import Services from '../../api/service';
-import Projects from '../../api/project'
 
 
 const ClickHandler = () => {
@@ -14,6 +13,14 @@ const SubmitHandler = (e) => {
 const Footer = (props) => {
     return (
         <footer className="wpo-site-footer">
+            <div className="footer-cta">
+                <div className="container">
+                    <div className="footer-cta-inner">
+                        <h3>Need a plumber today?</h3>
+                        <Link href="/schedule-service" className="theme-btn">Schedule Service</Link>
+                    </div>
+                </div>
+            </div>
             <div className="wpo-upper-footer">
                 <div className="container">
                     <div className="row">
@@ -22,7 +29,7 @@ const Footer = (props) => {
                                 <div className="logo widget-title">
                                     <img src='/images/logo2.png' alt="blog" />
                                 </div>
-                                <p>Management Plumbing includes a broad range of activities, and the many firms and their members often define these practices.</p>
+                                <p>Trusted local experts for residential and commercial plumbing. Fast, friendly, and guaranteed.</p>
                                 <ul>
                                     <li>
                                         <Link onClick={ClickHandler} href="/">
@@ -65,26 +72,31 @@ const Footer = (props) => {
                         <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div className="widget link-widget">
                                 <div className="widget-title">
-                                    <h3>Services </h3>
+                                    <h3>Quick Links</h3>
                                 </div>
                                 <ul>
-                                    {Services.slice(0, 5).map((service, srv) => (
-                                        <li key={srv}><span>{service.sTitle}</span></li>
-                                    ))}
+                                    <li><Link href="/about"><span>About Us</span></Link></li>
+                                    <li><Link href="/residential"><span>Residential</span></Link></li>
+                                    <li><Link href="/commercial"><span>Commercial</span></Link></li>
+                                    <li><Link href="/pricing"><span>Pricing</span></Link></li>
+                                    <li><Link href="/service"><span>Services</span></Link></li>
+                                    <li><Link href="/contact"><span>Contact</span></Link></li>
                                 </ul>
                             </div>
                         </div>
 
                         <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
-                            <div className="widget instagram">
+                            <div className="widget newsletter">
                                 <div className="widget-title">
-                                    <h3>Projects</h3>
+                                    <h3>Stay in the loop</h3>
                                 </div>
-                                <ul className="d-flex">
-                                    {Projects.slice(0, 6).map((project, srv) => (
-                                        <li key={srv}><span><img src={project.pImg} alt="" /></span></li>
-                                    ))}
-                                </ul>
+                                <p>Get maintenance tips, specials, and service updates straight to your inbox.</p>
+                                <form className="newsletter-form" onSubmit={SubmitHandler}>
+                                    <label htmlFor="newsletter-email" className="sr-only">Email address</label>
+                                    <input id="newsletter-email" type="email" placeholder="Your email address" required />
+                                    <button type="submit" className="theme-btn">Subscribe</button>
+                                </form>
+                                <small className="newsletter-note">By subscribing, you agree to our <Link href="/terms">Terms</Link>.</small>
                             </div>
                         </div>
                     </div>
@@ -94,7 +106,7 @@ const Footer = (props) => {
                 <div className="container">
                     <div className="row">
                         <div className="col col-xs-12">
-                            <p className="copyright"> Copyright &copy; 2025 mb Plumbing. All Rights Reserved.</p>
+                            <p className="copyright"> Copyright &copy; 2025 MB Plumbing. All Rights Reserved. <Link href="/terms">Terms</Link></p>
                         </div>
                     </div>
                 </div>

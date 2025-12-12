@@ -260,14 +260,67 @@
       
       .wpo-p-details-section {
         margin-top: 50px;
-      }
-      .wpo-p-details-section ul {
-        list-style: none;
+        
+        h2 {
+          font-family: $heading-font;
+          font-size: 42px;
+          line-height: 1.2;
+          letter-spacing: -0.01em;
+          color: $heading-color;
+          font-weight: 800;
+          margin-bottom: 15px;
+        }
+
+        p {
+          font-family: $base-font;
+          font-size: 18px;
+          line-height: 1.8;
+          color: $body-color;
+          margin-bottom: 24px;
+        }
+
+        ul {
+          list-style: none;
+          margin: 10px 0 0;
+          padding: 0;
+        }
+
+        ul li {
+          position: relative;
+          padding-left: 28px;
+          margin-bottom: 12px;
+          font-size: 17px;
+          color: $dark-gray;
+          font-weight: 600;
+        }
+
+        ul li::before {
+          position: absolute;
+          left: 0;
+          top: 2px;
+          font-family: "themify";
+          content: "\e649"; // arrow-right bullet
+          font-size: 14px;
+          color: $theme-primary-color;
+        }
+
+        .theme-btn {
+          display: inline-block;
+          padding: 12px 24px;
+          font-size: 16px;
+          font-weight: 700;
+          border-radius: 8px;
+        }
+
+        @media(max-width: 767px) {
+          h2 { font-size: 30px; }
+          p { font-size: 16px; }
+        }
       }
       .wpo-p-details-section h5 {
-        font-size: 30px;
-        margin-bottom: 30px;
-        font-weight: 500;
+        font-size: 26px;
+        margin-bottom: 20px;
+        font-weight: 700;
       }
     
 }
