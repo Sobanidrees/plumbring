@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import SectionTitle from '../SectionTitle';
 
 const groups = [
@@ -18,6 +19,15 @@ const groups = [
 ];
 
 const ServiceAreas = () => {
+  const [zip, setZip] = useState('');
+  const router = useRouter();
+  const validZip = /^\d{5}$/.test(zip);
+  const handleZipCheck = (e) => {
+    e.preventDefault();
+    if (validZip) {
+      router.push(`/schedule-service?zip=${zip}`);
+    }
+  };
   return (
     <section className="wpo-service-areas section-padding">
       <div className="container">
@@ -25,9 +35,47 @@ const ServiceAreas = () => {
           <div className="col-lg-8">
             <SectionTitle
               MainTitle={'Local Plumbers Near You'}
-              Description={'Same‑day service across the Inland Empire and North Orange County. Licensed pros in your neighborhood with clean, respectful work and upfront pricing.'}
+              Description={'Same‑day coverage across the Inland Empire and North Orange County. Licensed, bonded, and insured — clean, respectful service with upfront pricing.'}
             />
           </div>
+        </div>
+
+        <div className="coverage-tools">
+          <form onSubmit={handleZipCheck} className="zip-form" aria-label="Check coverage by ZIP">
+            <label htmlFor="zip" className="sr-only">ZIP code</label>
+            <input
+              id="zip"
+              type="text"
+              inputMode="numeric"
+              pattern="[0-9]{5}"
+              maxLength={5}
+              placeholder="Enter ZIP code (e.g., 91730)"
+              value={zip}
+              onChange={(e) => setZip(e.target.value.replace(/\D/g, ''))}
+              aria-invalid={zip && !validZip ? 'true' : 'false'}
+            />
+            <button type="submit" className="theme-btn" disabled={!validZip}>Check</button>
+          </form>
+          <ul className="highlights">
+            <li>
+              <span className="check" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#0ea5e9"/><path d="M17 7 9.5 14.5 7 12" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </span>
+              <span>Licensed, bonded & insured</span>
+            </li>
+            <li>
+              <span className="check" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#0ea5e9"/><path d="M17 7 9.5 14.5 7 12" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </span>
+              <span>Same‑day & weekend service</span>
+            </li>
+            <li>
+              <span className="check" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#0ea5e9"/><path d="M17 7 9.5 14.5 7 12" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </span>
+              <span>Upfront pricing</span>
+            </li>
+          </ul>
         </div>
 
         <div className="areas-grid">
