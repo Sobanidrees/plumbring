@@ -7,27 +7,25 @@ const Hero3 = () => {
         <section className="wpo-hero-section-2">
             <div className="container">
                 <div className="row">
-                    <div className="col col-xs-5 col-lg-5 offset-lg-7 col-12">
+                    {/* Place content on the left without offset for clearer alignment */}
+                    <div className="col col-lg-5 col-12">
                         <div className="wpo-hero-section-text">
                             <div className="wpo-hero-subtitle">
-                                <span>:: Highly Trained Staff </span>
+                                <span>:: Local Plumbing Pros</span>
                             </div>
                             <div className="wpo-hero-title">
-                                <h2>Ready For <span>Help</span> You.</h2>
+                                <h2>Fast, Reliable Plumbing — <span>Done Right</span>.</h2>
                             </div>
                             <div className="wpo-hero-des">
-                                <p>We are certified company. We provide best plumbing services for you & your company .
-                                </p>
+                                <p>Same-day service, honest pricing, and spotless work from certified plumbers.</p>
                             </div>
                             <div className="btns">
                                 <ul>
                                     <li>
-                                        <Link href="/appointment" className="theme-btn">Book Online</Link>
+                                        <Link href="/appointment" className="theme-btn">BOOK ONLINE</Link>
                                     </li>
                                     <li>
-                                        <div className="video-holder">
-                                            <VideoModal />
-                                        </div>
+                                        <Link href="tel:+17148635486" className="theme-btn-s2">Call 714-863-5486</Link>
                                     </li>
                                 </ul>
                             </div>

@@ -4,6 +4,7 @@ import Hero from '../../components/hero/Hero';
 import Features from '../../components/Features/Features';
 import WorkSection from '../../components/WorkSection/WorkSection';
 import HomeServicesGrid from '../../components/HomeServicesGrid/HomeServicesGrid';
+import PromotionsSection from '../../components/PromotionsSection/PromotionsSection';
 import FunFact from '../../components/FunFact/FunFact';
 import WhyChoose from '../../components/WhyChoose/WhyChoose';
 import ProjectSection from '../../components/ProjectSection/ProjectSection';
@@ -14,6 +15,7 @@ import Scrollbar from '../../components/scrollbar/scrollbar';
 import Appointment from '../../components/Appointment/Appointment';
 import Footer from '../../components/footer/Footer';
 import Testimonial from '../../components/Testimonial/Testimonial';
+import WhatsAppFab from '../../components/WhatsAppFab/WhatsAppFab';
 
 
 
@@ -26,8 +28,9 @@ const HomePage = (props) => {
             <Features />
             <WorkSection />
             <HomeServicesGrid />
+            <PromotionsSection />
             <WhyChoose />
-            <ServiceAreas />
+            {/* <ServiceAreas /> */}
             <FunFact />
             <ProjectSection />
             <TeamSection />
@@ -36,6 +39,7 @@ const HomePage = (props) => {
             <Testimonial />
             <Footer />
             <Scrollbar/>
+            <WhatsAppFab phone="+17148635486" message="Hi! I need plumbing help. Can you assist?" />
         </div>
     )
 };

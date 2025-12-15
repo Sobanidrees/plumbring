@@ -74,6 +74,10 @@ const Header = (props) => {
                             </div>
                             <div className="col-lg-2 col-md-2 col-2">
                                 <div className="header-right">
+                                    <a href="tel:+17148635486" aria-label="Call 714-863-5486" className="phone-cta">
+                                        <i className="fi flaticon-phone-call"></i>
+                                        <span>714-863-5486</span>
+                                    </a>
                                     <div className="header-search-form-wrapper">
                                         <div className="cart-search-contact">
                                             <button onClick={() => setMenuState(!menuActive)} className="search-toggle-btn"><i
