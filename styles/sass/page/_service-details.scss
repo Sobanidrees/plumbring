@@ -1,0 +1,98 @@
+.wpo-service-details {
+  .service-hero {
+    margin-bottom: 24px;
+  }
+  .hero-card {
+    background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+  }
+  .hero-card h1 {
+    margin: 0 0 8px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+  .hero-card p {
+    color: #4b5b78;
+    margin: 0 0 12px;
+  }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 6px;
+  }
+  .meta-chip {
+    background: #ffffff;
+    border: 1px solid #d6e4ff;
+    color: #1b57c0;
+    font-weight: 700;
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .points-list {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 18px;
+  }
+  @media (max-width: 767px) {
+    .points-list { grid-template-columns: 1fr; }
+  }
+  .points-list li {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .point-text {
+    color: #253041;
+    font-weight: 600;
+  }
+  .service-media {
+    margin-top: 14px;
+  }
+  .service-cta {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .service-cta .theme-btn-s2.alt {
+    background: #ffffff;
+    color: #0b1a2b;
+    border: 1px solid #cfe0ff;
+    font-weight: 800;
+  }
+
+  .wpo-faq-section{
+    margin-top: 26px;
+  }
+  .wpo-faq-section .faq-list .MuiAccordion-root{
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .wpo-faq-section .faq-list .MuiAccordionSummary-root{
+    padding: 12px 18px;
+  }
+  .wpo-faq-section .faq-list .MuiAccordionDetails-root{
+    padding: 8px 18px 16px;
+  }
+  .wpo-faq-section .faq-q{
+    font-weight: 800;
+    color: #0b3a7a;
+  }
+  .wpo-faq-section .faq-a{
+    color: #4b5b78;
+  }
+}

@@ -26,9 +26,17 @@ const ServiceSidebar = (props) => {
                     </ul>
                 </div>
                 <div className="wpo-contact-widget widget">
-                    <h2>How We Can <br /> Help You!</h2>
-                    <p>labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-                    <Link href="/contact">Contact Us</Link>
+                    <h2>Need Plumbing Help Today?</h2>
+                    <p>Live dispatch, licensed techs, and clean, respectful service. Get fast help for leaks, clogs, water heaters, and more — with clear, upfront pricing.</p>
+                    <div className="meta-chips">
+                        <span className="meta-chip">Same‑day service</span>
+                        <span className="meta-chip">Licensed & insured</span>
+                        <span className="meta-chip">Upfront pricing</span>
+                    </div>
+                    <div className="actions">
+                        <Link href="/schedule-service" className="theme-btn">Book Online</Link>
+                        <Link href="/contact" className="theme-btn-s2 alt">Contact Us</Link>
+                    </div>
                 </div>
             </div>
         </div>

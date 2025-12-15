@@ -12,8 +12,7 @@
   display: grid;
   place-items: center;
   box-shadow: 0 10px 24px rgba(37, 211, 102, 0.35);
-  /* Keep below scroll button layer to avoid blocking clicks */
-  z-index: 98;
+  z-index: 1030;
   text-decoration: none;
 
   .icon { display: inline-flex; }
@@ -22,6 +21,6 @@
 
   @media(max-width: 767px){
     width: 52px; height: 52px;
-    bottom: 10px; right: 74px;
+    bottom: 96px; right: 16px;
   }
 }

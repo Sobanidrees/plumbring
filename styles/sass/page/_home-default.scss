@@ -597,8 +597,11 @@ wpo-projects
 	.grid{
         .project-inner{
             position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.10);
             .hover-content  {
-                background: transparentize($theme-primary-color, 0.1);
+                background: linear-gradient(180deg, rgba(0,82,218,0.0) 0%, rgba(0,82,218,0.65) 100%);
                 width: 100%;
                 height: 100%;
                 position: absolute;
@@ -619,11 +622,45 @@ wpo-projects
                     height: 100%;
                     display: block;
                     object-fit: cover;
+                    transform: scale(1);
+                    transition: transform .35s ease;
+                }
+                .badge-chip{
+                    position: absolute;
+                    left: 12px;
+                    top: 12px;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 6px;
+                    background: linear-gradient(135deg, $theme-primary-color 0%, lighten($theme-primary-color, 10%) 100%);
+                    color: #fff;
+                    font-size: 12px;
+                    font-weight: 800;
+                    padding: 6px 12px;
+                    border-radius: 999px;
+                    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+                    border: 1px solid rgba(255,255,255,0.35);
+                    z-index: 2;
+                    transform: translateZ(0);
+                    transition: transform .2s ease, box-shadow .2s ease;
+                    letter-spacing: 0.02em;
+                }
+                .badge-chip .chip-icon{
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .badge-chip.plumbing{
+                    background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+                    border-color: rgba(255,255,255,0.35);
                 }
             }
         }
     } 
-
+    .grid:hover .img-holder .badge-chip{
+        transform: translateY(-2px);
+        box-shadow: 0 12px 22px rgba(0,0,0,0.16);
+    }
 	.grid:hover .hover-content {
 		opacity: 1;
 		top: 0;
@@ -635,9 +672,41 @@ wpo-projects
 		}
 	}
 
+    .grid:hover .img-holder img{
+        transform: scale(1.08);
+    }
+
+    // Mobile-first enhancements: show details overlay without hover
+    @media(max-width: 767px){
+        .grid{
+            .project-inner{
+                border-radius: 14px;
+            }
+            .project-inner .hover-content{
+                opacity: 1;
+                transform: none;
+                background: linear-gradient(180deg, rgba(0,0,0,0) 10%, rgba(0,82,218,0.78) 85%);
+            }
+            .img-holder{
+                aspect-ratio: 16 / 11;
+            }
+        }
+        .grid .details{
+            padding: 0 16px 18px;
+        }
+        .grid .details .hover-cta .theme-btn-s2{
+            width: 100%;
+            text-align: center;
+        }
+        .grid .img-holder .badge-chip{
+            font-size: 11px;
+            padding: 5px 10px;
+        }
+    }
+
 	.grid .details {
 		width: 100%;
-		padding: 0 35px 45px;
+		padding: 0 28px 24px;
 		position: absolute;
 		left: 0;
 		bottom: 0;
@@ -669,16 +738,30 @@ wpo-projects
 
 	.grid .details p {
 		font-family: $heading-font;
-		font-size: 16px;
-		font-weight: 500;
+		font-size: 15px;
+		font-weight: 600;
 		color: $white;
-		margin: 0;
+		margin: 0 0 10px;
 		text-transform: capitalize;
 
         @media(max-width:767px){
             font-size: 14px;
         }
 	}
+
+    .grid .details .hover-cta{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .grid .details .hover-cta .theme-btn-s2{
+        background: rgba(255,255,255,0.18);
+        color: #ffffff;
+        border: 1px solid rgba(255,255,255,0.35);
+        backdrop-filter: blur(6px);
+        padding: 10px 16px;
+        border-radius: 8px;
+        font-weight: 700;
+    }
 
 	.See-all-btn{
        text-align: center;
@@ -1106,29 +1189,29 @@ wpo-projects
         }
     }
 
-    .testimonials-wrapper{
+        .testimonials-wrapper{
 
-        .slick-slide{
-            padding: 0 10px;
-        }
-        .testimonials-item{
-            .testimonials-item-top{
-                padding:40px;
-                background: $section-bg-color;
+            .slick-slide{
+                padding: 0 10px;
+            }
+            .testimonials-item{
+                .testimonials-item-top{
+                padding:32px;
+                background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
                 position: relative;
                 z-index: 1;
 
                 &:before{
                     content: '';
                     position: absolute;
-                    bottom: -25px;
-                    left: 40px;
+                    bottom: -22px;
+                    left: 32px;
                     margin-top: 0;
                     width: 0;
                     height: 0;
                     border-style: solid;
-                    border-width: 25px 25px 0 25px;
-                    border-color: $section-bg-color transparent transparent transparent;
+                    border-width: 22px 22px 0 22px;
+                    border-color: #f8fbff transparent transparent transparent;
                 }
 
                 &:after{
@@ -1137,8 +1220,8 @@ wpo-projects
                     top: 50%;
                     content: "\e726";
                     font-family: "themify";
-                    font-size: 150px;
-                    color: #e7f0fe;
+                    font-size: 120px;
+                    color: #ecf3ff;
                     transform: translate(-50%, -50%);
                     z-index: -1;
                     opacity: .7;
@@ -1146,26 +1229,36 @@ wpo-projects
 
                 p{
                     margin-bottom: 0;
-                    line-height: 30px;
+                    line-height: 28px;
                 }
             }
 
             .testimonials-item-bottom{
-                padding-top: 30px;
-                padding-left: 35px;
+                padding-top: 22px;
+                padding-left: 32px;
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
 
-                .testimonials-item-bottom-author{
-                    margin-right: 15px;
-                    img{
-                        width: 70px;
-                        height: 70px;
-                        border-radius: 50%;
-                    }
+                .author-meta{
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                }
+                .avatar-letter{
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 50%;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+                    color: #fff;
+                    font-weight: 800;
+                    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35);
                 }
 
-                .testimonials-item-bottom-author-text{
+                .author-text{
                     h3{
                         font-size: 22px;
                         font-weight: 600;
@@ -1179,6 +1272,22 @@ wpo-projects
                         color: #6c6c6c;
                     }
                 }
+                .rating{
+                    list-style: none;
+                    display: flex;
+                    gap: 6px;
+                    margin: 0;
+                    padding: 0 18px 0 0;
+                }
+                .rating li{
+                    color: #c9d6ff;
+                    position: relative;
+                }
+                .rating li.on{
+                    color: #f4b81c;
+                    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.12));
+                }
+                .rating li svg{ display:block; }
             }
         }
 

@@ -31,11 +31,24 @@ const ProjectSection = () => {
                                     <div className="project-inner">
                                         <div className="img-holder">
                                             <img className="img-responsive" src={project.pImg} alt="" />
+                                            <span className={`badge-chip ${String(project.subTitle || '').toLowerCase().replace(/\s+/g, '-')}`}>
+                                                <span className="chip-icon">
+                                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M4 20h16v-2H4v2Zm14-8h-3V4h-2v8H7l5 5 6-5Z" fill="#ffffff"/>
+                                                    </svg>
+                                                </span>
+                                                {project.subTitle}
+                                            </span>
                                         </div>
                                         <div className="hover-content">
                                             <div className="details">
                                                 <h3><Link onClick={ClickHandler} href='/project/[slug]' as={`/project/${project.slug}`}>{project.title}</Link></h3>
                                                 <p>{project.description}</p>
+                                                <div className="hover-cta">
+                                                    <Link onClick={ClickHandler} href='/project/[slug]' as={`/project/${project.slug}`} className="theme-btn-s2">
+                                                        View details
+                                                    </Link>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -44,8 +57,8 @@ const ProjectSection = () => {
                         </div>
                         <div className={`See-all-btn ${buttonActive ? "d-none" : ""}`}>
                             <span onClick={() => setButtonState(!buttonActive)}>
-                                <a legacyBehavior className="theme-btn" onClick={() => setCount(number + number)}>
-                                    View All Project
+                                <a className="theme-btn" onClick={() => setCount(Projects.length)}>
+                                    View All Projects
                                 </a>
                             </span>
                         </div>

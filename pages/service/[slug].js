@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import Services from '../../api/service'
+import Overrides from '../../api/serviceOverrides'
 import Link from 'next/link'
 import ServiceSidebar from './single/sidebar';
 import PageTitle from '../../components/pagetitle/PageTitle';
@@ -26,52 +27,66 @@ const ServiceSinglePage = ({ serviceDetails }) => {
         );
     }
 
+    const merged = { ...serviceDetails, ...(Overrides[serviceDetails.slug] || {}) };
     return (
         <Fragment>
             <Navbar />
-            <PageTitle pageTitle={serviceDetails.sTitle} pagesub={serviceDetails.sTitle} />
+            <PageTitle pageTitle={merged.sTitle} pagesub={merged.sTitle} />
             <div className="wpo-project-details-area wpo-service-details section-padding">
                 <div className="container">
                     <div className="row">
                         <ServiceSidebar />
                         <div className="col-lg-8 order-lg-2 order-md-1 order-1">
-                            <div className="wpo-minimals-wrap">
-                                <div className="minimals-img">
-                                    <img src={serviceDetails.sImg} alt="" />
+                            <div className="service-hero">
+                                <div className="hero-card">
+                                    <h1>{merged.sTitle}</h1>
+                                    <p>{merged.overview || merged.description}</p>
+                                    <div className="hero-meta">
+                                        <span className="meta-chip">Free in‑person estimate</span>
+                                        <span className="meta-chip">Licensed & insured</span>
+                                        <span className="meta-chip">Upfront pricing</span>
+                                    </div>
                                 </div>
                             </div>
                             <div className="wpo-p-details-section">
-                                <h2>{serviceDetails.sTitle}</h2>
-                                <p>{serviceDetails.overview || serviceDetails.description}</p>
-                                {serviceDetails.keyPoints && (
+                                {merged.keyPoints && (
                                     <div style={{ marginTop: 15 }}>
-                                        <h5>What you can expect</h5>
-                                        <ul>
-                                            {serviceDetails.keyPoints.map((pt, i) => (
-                                                <li key={i}>{pt}</li>
+                                        <h5>{merged.pointsLabel || 'What you can expect'}</h5>
+                                        <ul className="points-list">
+                                            {merged.keyPoints.map((pt, i) => (
+                                                <li key={i}>
+                                                    <span className="point-icon" aria-hidden="true">
+                                                        <svg width="18" height="18" viewBox="0 0 24 24">
+                                                            <circle cx="12" cy="12" r="12" fill="#0ea5e9" />
+                                                            <path d="M17 7 9.5 14.5 7 12" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                                                        </svg>
+                                                    </span>
+                                                    <span className="point-text">{pt}</span>
+                                                </li>
                                             ))}
                                         </ul>
                                     </div>
                                 )}
-                                <div className="row">
+                                <div className="service-media row">
                                     <div className="col-md-6 col-sm-6 col-12">
                                         <div className="wpo-p-details-img">
-                                            <img src={serviceDetails.ssImg1} alt="" />
+                                            <img src={merged.ssImg1} alt="" />
                                         </div>
                                     </div>
                                     <div className="col-md-6 col-sm-6 col-12">
                                         <div className="wpo-p-details-img">
-                                            <img src={serviceDetails.ssImg2} alt="" />
+                                            <img src={merged.ssImg2} alt="" />
                                         </div>
                                     </div>
                                 </div>
-                                <div style={{ marginTop: 20 }}>
+                                <div className="service-cta">
                                     <Link href="/schedule-service" className="theme-btn">Schedule Service</Link>
+                                    <Link href="/quick-quote" className="theme-btn-s2 alt">Get Free Estimate</Link>
                                 </div>
                             </div>
                             <div className="wpo-faq-section">
-                                <h4>Frequently Ask Questions</h4>
-                                <Benefits />
+                                <h4>Frequently Asked Questions</h4>
+                                <Benefits slug={merged.slug} />
                             </div>
                         </div>
                     </div>
