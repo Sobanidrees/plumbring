@@ -2,10 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 
 const bullets = [
-  'Fast approvals for leak repairs and emergencies',
-  'Low monthly payments on water heater replacements',
-  'Flexible plans for repipes, main lines, and cleanouts',
-  '0% and no‑money‑down options available',
+  'Emergency plumbing — leaks, backups, burst pipes',
+  'Drain cleaning and hydro jetting',
+  'Water heater repair & install — tank and tankless',
+  'Leak detection & slab leak repair',
+  'Repiping and main water line service',
+  'Trenchless sewer repair & cleanouts',
 ];
 
 export default function FinancingSection() {
@@ -15,10 +17,10 @@ export default function FinancingSection() {
         <div className="financing-box">
           <div className="financing-inner">
             <div className="header text-center">
-              <h2>Plumbing Made Affordable—Pay Over Time</h2>
+              <h2>Your Local Plumbing Experts</h2>
               <p>
-                Finance plumbing work without the stress. Choose flexible monthly payments for leak fixes, drain repairs,
-                repipes, and water heater installs. Apply in minutes with no hidden fees.
+                Licensed, bonded, and insured. Same‑day service for leaks, clogs, water heaters, and more — clean,
+                respectful work with upfront pricing across the Inland Empire and North Orange County.
               </p>
             </div>
             <div className="row align-items-start justify-content-between">
@@ -39,10 +41,10 @@ export default function FinancingSection() {
               </div>
               <div className="col-lg-5">
                 <div className="callout">
-                  <h4>Pre‑Qualify in Minutes — No Impact to Credit</h4>
-                  <p>Enjoy peace of mind and pay at your pace.</p>
+                  <h4>Same‑Day Plumbing — Book Online</h4>
+                  <p>Upfront pricing. Licensed, bonded & insured technicians.</p>
                   <Link href="/schedule-service" className="theme-btn">
-                    See Plumbing Financing
+                    Schedule Service
                   </Link>
                 </div>
               </div>
