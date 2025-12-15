@@ -13,6 +13,7 @@ Emphasis on graphics (icons) with minimal text.
   }
 
   .home-services-grid {
+    // legacy grid class retained for compatibility if needed
     display: grid;
     grid-template-columns: repeat(5, minmax(0,1fr));
     gap: 24px;
@@ -20,6 +21,35 @@ Emphasis on graphics (icons) with minimal text.
     @media(max-width:991px){ grid-template-columns: repeat(3, minmax(0,1fr)); }
     @media(max-width:767px){ grid-template-columns: repeat(2, minmax(0,1fr)); }
     @media(max-width:480px){ grid-template-columns: 1fr; }
+  }
+
+  // Slider wrapper
+  .home-services-slider {
+    // Keep the slider centered within the container
+    .slick-slide > div { padding: 0 12px; }
+    .slick-list { overflow: hidden; }
+    .slick-track { display: flex; align-items: stretch; }
+    .home-service-card { height: 100%; }
+
+    // Arrow styles
+    .slick-prev,
+    .slick-next {
+      width: 42px; height: 42px; border-radius: 999px;
+      background: #2f6df6; // blue
+      display: grid; place-items: center;
+      z-index: 5;
+    }
+
+    .slick-prev { left: -18px; }
+    .slick-next { right: -18px; }
+
+    .slick-prev:before,
+    .slick-next:before { color: #fff; opacity: 1; font-size: 20px; }
+
+    @media(max-width: 991px){
+      .slick-prev { left: -10px; }
+      .slick-next { right: -10px; }
+    }
   }
 
   .home-service-card {

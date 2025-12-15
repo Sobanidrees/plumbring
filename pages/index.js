@@ -4,6 +4,7 @@ import Hero from '../components/hero/Hero';
 import Features from '../components/Features/Features';
 import WorkSection from '../components/WorkSection/WorkSection';
 import HomeServicesGrid from '../components/HomeServicesGrid/HomeServicesGrid';
+import PromotionsSection from '../components/PromotionsSection/PromotionsSection';
 import WhyChoose from '../components/WhyChoose/WhyChoose';
 import FunFact from '../components/FunFact/FunFact';
 import ProjectSection from '../components/ProjectSection/ProjectSection';
@@ -26,6 +27,7 @@ const HomePage = (props) => {
             <Features />
             <WorkSection />
             <HomeServicesGrid />
+            <PromotionsSection />
             <WhyChoose />
             <ServiceAreas />
             <FunFact />

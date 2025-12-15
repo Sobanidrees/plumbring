@@ -26,6 +26,12 @@
 		border-radius: 5px;
 		box-shadow: 0px 7px 13.5px 1.5px rgba(0, 0, 0, 0.05);
 
+		// Make each pricing card a vertical flex container so content stacks
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-height: 420px; // ensure equal baseline height for CTA alignment
+
 		@include media-query(1199px) {
 			padding: 0 15px 55px;
 		}
@@ -106,6 +112,8 @@
 	.pricing-body ul {
 		margin-bottom: 50px;
         list-style: none;
+		// Allow the feature list to take available space
+		flex: 1 0 auto;
 
 		@include media-query(991px) {
 			margin-bottom: 40px;
@@ -129,6 +137,11 @@
 		border-radius: 5px;
 		color: darken($theme-primary-color, 9%);
 		font-weight: 500;
+		// Pin the button to the bottom of the card and center it
+		margin-top: auto;
+		max-width: 220px;
+		margin-left: auto;
+		margin-right: auto;
 
 		@include media-query(1199px) {
 			padding: 10px 0;
@@ -188,6 +201,7 @@
 		.get-started {
 			background: $theme-primary-color;
 			color: $white;
+			box-shadow: 0 8px 18px rgba(47,109,246,0.25);
 		}
 		.get-started:hover {
 			background: darken($theme-primary-color, 8%);
