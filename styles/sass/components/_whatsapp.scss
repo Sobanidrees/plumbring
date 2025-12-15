@@ -7,21 +7,71 @@
   width: 56px;
   height: 56px;
   border-radius: 999px;
-  background: #25D366; // WhatsApp green
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
   color: #fff;
   display: grid;
   place-items: center;
   box-shadow: 0 10px 24px rgba(37, 211, 102, 0.35);
-  /* Keep below scroll button layer to avoid blocking clicks */
-  z-index: 98;
+  z-index: 1030;
   text-decoration: none;
+  overflow: visible;
+  transition: transform .2s ease, filter .2s ease;
 
   .icon { display: inline-flex; }
 
-  &:hover { filter: brightness(1.05); }
+  &:hover { filter: brightness(1.06); transform: translateY(-1px); }
+
+  /* Pulse ring */
+  &::after{
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 999px;
+    background: radial-gradient(closest-side, rgba(37,211,102,0.25), rgba(37,211,102,0));
+    animation: whatsappPulse 2.4s ease-out infinite;
+    z-index: -1;
+  }
+
+  .badge{
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    background: #0ea5e9;
+    color: #fff;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 10px;
+    padding: 4px 6px;
+    box-shadow: 0 6px 12px rgba(14,165,233,.35);
+  }
+
+  .label{
+    position: absolute;
+    left: -110px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    border-radius: 999px;
+    padding: 6px 10px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease;
+  }
+  &:hover .label{ opacity: 1; }
 
   @media(max-width: 767px){
     width: 52px; height: 52px;
-    bottom: 10px; right: 74px;
+    bottom: 96px; right: 16px;
+    .label{ display: none; }
   }
+}
+
+@keyframes whatsappPulse{
+  0%{ opacity: .75; transform: scale(0.95); }
+  70%{ opacity: 0; transform: scale(1.25); }
+  100%{ opacity: 0; transform: scale(1.25); }
 }

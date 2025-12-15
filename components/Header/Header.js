@@ -4,10 +4,16 @@ import Image from "next/image";
 import HeaderTopbar from '../HeaderTopbar/HeaderTopbar'
 import MobileMenu from '../MobileMenu/MobileMenu'
 import Services from '../../api/service'
+import { useRouter } from 'next/router';
 
 
 const Header = (props) => {
     const [menuActive, setMenuState] = useState(false);
+    const router = useRouter();
+    const isActive = (href) => {
+        const path = router.pathname || '';
+        return path === href || (href !== '/' && path.startsWith(href));
+    };
     const SubmitHandler = (e) => {
         e.preventDefault()
     }
@@ -17,6 +23,7 @@ const Header = (props) => {
     }
 
     return (
+        <>
         <header id="header" className={props.topbarNone}>
             <HeaderTopbar />
             <div className={`wpo-site-header ${props.hclass}`}>
@@ -30,7 +37,7 @@ const Header = (props) => {
                             </div>
                             <div className="col-lg-3 col-md-6 col-6">
                                 <div className="navbar-header">
-                                    <Link onClick={ClickHandler} href="/home" className="navbar-brand">
+                                    <Link onClick={ClickHandler} href="/" className="navbar-brand">
                                         <div className="brand-logo">
                                             <Image
                                                 src={props.Logo || "/images/logo.png"}
@@ -49,11 +56,13 @@ const Header = (props) => {
                                     <button className="menu-close"><i className="ti-close"></i></button>
                     <ul className="nav navbar-nav mb-2 mb-lg-0">
                         <li>
-                            <Link onClick={ClickHandler} href="/home">Home</Link>
+                            <Link onClick={ClickHandler} href="/" className={`nav-link-modern ${isActive('/') ? 'active' : ''}`}>Home</Link>
                         </li>
-                        <li><Link onClick={ClickHandler} href="/about">About</Link></li>
+                        <li>
+                            <Link onClick={ClickHandler} href="/about" className={`nav-link-modern ${isActive('/about') ? 'active' : ''}`}>About</Link>
+                        </li>
                         <li className="menu-item-has-children">
-                            <Link onClick={ClickHandler} href="/service">Services</Link>
+                            <Link onClick={ClickHandler} href="/service" className={`nav-link-modern ${isActive('/service') ? 'active' : ''}`}>Services</Link>
                             <ul className="sub-menu">
                                 {Services.map((service, idx) => (
                                     <li key={idx}>
@@ -65,9 +74,11 @@ const Header = (props) => {
                             </ul>
                         </li>
                         
-                                        
-                                        
-                                        <li><Link onClick={ClickHandler} href="/contact">Contact</Link></li>
+                                            
+                                            
+                                        <li>
+                                            <Link onClick={ClickHandler} href="/contact" className={`nav-link-modern ${isActive('/contact') ? 'active' : ''}`}>Contact</Link>
+                                        </li>
                                     </ul>
 
                                 </div>
@@ -105,6 +116,58 @@ const Header = (props) => {
                 </nav>
             </div>
         </header>
+        <style jsx>{`
+          .navigation-holder .navbar-nav {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+          }
+          .navigation-holder .nav-link-modern {
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-weight: 500;
+            color: #0b1a2b;
+            transition: background-color 150ms ease, color 150ms ease, box-shadow 150ms ease;
+          }
+          .navigation-holder .nav-link-modern:hover {
+            background: #f3f7ff;
+            color: #0d6efd;
+            box-shadow: 0 0.25rem 0.75rem rgba(13,110,253,0.08);
+          }
+          .navigation-holder .nav-link-modern.active {
+            background: #e8f0ff;
+            color: #0d6efd;
+          }
+          .navigation-holder .menu-item-has-children > .nav-link-modern {
+            position: relative;
+          }
+          .navigation-holder .menu-item-has-children:hover > .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+          }
+          .navigation-holder .sub-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(6px);
+            transition: all 150ms ease;
+            border-radius: 12px;
+            padding: 8px 10px;
+            box-shadow: 0 0.75rem 1.25rem rgba(0,0,0,0.08);
+            background: #fff;
+          }
+          .navigation-holder .sub-menu li a {
+            display: block;
+            padding: 8px 12px;
+            border-radius: 8px;
+            color: #0b1a2b;
+          }
+          .navigation-holder .sub-menu li a:hover {
+            background: #f3f7ff;
+            color: #0d6efd;
+          }
+        `}</style>
+        </>
     )
 }
 

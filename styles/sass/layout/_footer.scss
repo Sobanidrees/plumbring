@@ -9,19 +9,25 @@
 
     /* Top CTA strip */
     .footer-cta {
-        background: lighten($dark-gray, 4%);
+        background: linear-gradient(180deg, lighten($dark-gray, 4%) 0%, lighten($dark-gray, 6%) 100%);
         border-bottom: 1px solid rgba(255,255,255,0.08);
         .footer-cta-inner {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr auto;
             align-items: center;
-            justify-content: space-between;
+            gap: 16px;
             padding: 24px 0;
 
-            h3 {
+            .cta-copy h3 {
                 color: $white;
                 font-family: $heading-font;
-                font-size: 22px;
+                font-size: 26px;
                 margin: 0;
+                letter-spacing: -0.01em;
+            }
+            .cta-copy p{
+                color: rgba($white,0.85);
+                margin: 4px 0 0;
             }
 
             .theme-btn {
@@ -31,11 +37,24 @@
                 border-radius: 8px;
                 font-weight: 700;
             }
+            .cta-actions{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                justify-content: flex-end;
+            }
+            .theme-btn-s2.alt{
+                background: rgba(255,255,255,0.14);
+                color: $white;
+                border: 1px solid rgba(255,255,255,0.35);
+                font-weight: 800;
+                padding: 12px 20px;
+                border-radius: 8px;
+            }
 
             @media(max-width:767px){
-                flex-direction: column;
-                gap: 12px;
-                text-align: center;
+                grid-template-columns: 1fr;
+                .cta-actions{ justify-content: center; flex-wrap: wrap; }
             }
         }
     }
@@ -106,7 +125,7 @@
             font-size: 20px;
             color: $white;
             margin: 0;
-            text-transform: uppercase;
+            text-transform: none;
             position: relative;
             font-family: $heading-font;
 
@@ -138,6 +157,11 @@
             @media (max-width: 767px) {
                 max-width: 180px; // scale down slightly on small screens
             }
+        }
+        .logo img.footer-logo{
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.08);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.18);
         }
     }
 
@@ -223,7 +247,7 @@
                 }
             }
             li+li{
-              padding-top: 15px;
+              padding-top: 12px;
             }
         }
     }

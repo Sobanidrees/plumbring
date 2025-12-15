@@ -1,0 +1,35 @@
+import React from 'react';
+import { useRouter } from 'next/router';
+
+const WhatsAppFloat = ({ phone = '17148635486' }) => {
+  const router = useRouter();
+  const service = router.query?.service ? String(router.query.service).replace(/-/g, ' ') : '';
+  const text = service
+    ? `Hi! I’d like to schedule ${service}.`
+    : 'Hi! I’d like to schedule a plumbing service.';
+  const href = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
+  return (
+    <>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+        className="whatsapp-fab"
+      >
+        <span className="icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="12" fill="#25D366"/>
+            <path fill="#FFFFFF" d="M17.472 14.382c-.297-.149-1.758-.867-2.027-.967-.271-.101-.468-.149-.666.149-.198.297-.767.967-.94 1.164-.173.198-.346.223-.643.074-.297-.149-1.255-.463-2.39-1.475-.883-.785-1.48-1.753-1.653-2.05-.173-.297-.018-.458.131-.606.134-.133.297-.346.446-.519.149-.173.198-.297.298-.495.099-.198.05-.371-.025-.52-.075-.149-.666-1.609-.912-2.207-.242-.579-.487-.501-.666-.51-.173-.009-.371-.011-.568-.011-.198 0-.52.074-.792.372-.271.297-1.04 1.016-1.04 2.479s1.064 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.625.712.226 1.362.194 1.877.118.572-.085 1.758-.718 2.006-1.413.248-.695.248-1.29.173-1.413-.074-.123-.271-.198-.568-.347m-5.421 7.616h-.003a11.873 11.873 0 0 1-6.031-1.559l-.436-.26-4.482 1.16 1.196-4.372-.285-.449a11.86 11.86 0 0 1-1.83-6.343c.001-6.571 5.338-11.908 11.912-11.908 3.181 0 6.167 1.24 8.413 3.488a11.839 11.839 0 0 1 3.486 8.414c-.003 6.572-5.339 11.909-11.94 11.909m9.713-21.622A13.182 13.182 0 0 0 12.05.003C5.413.003.06 5.356.058 11.998c0 2.118.553 4.196 1.607 6.023L.002 24l6.134-1.607a12.04 12.04 0 0 0 5.913 1.51h.005c.001 0 .001 0 0 0 6.635 0 11.987-5.352 11.99-11.987a11.9 11.9 0 0 0-3.489-8.419Z"/>
+          </svg>
+        </span>
+        <span className="badge" aria-hidden="true">24/7</span>
+        <span className="label" aria-hidden="true">WhatsApp</span>
+      </a>
+      
+    </>
+  );
+};
+
+export default WhatsAppFloat;

@@ -14,7 +14,7 @@ const Hero3 = () => {
                                 <span>:: Local Plumbing Pros</span>
                             </div>
                             <div className="wpo-hero-title">
-                                <h2>Fast, Reliable Plumbing — <span>Done Right</span>.</h2>
+                                <h2>Trusted Local Plumbers — <span>24/7 Emergency Service</span>.</h2>
                             </div>
                             <div className="wpo-hero-des">
                                 <p>Same-day service, honest pricing, and spotless work from certified plumbers.</p>

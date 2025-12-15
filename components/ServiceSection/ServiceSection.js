@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import SectionTitle from '../SectionTitle';
 import Services from '../../api/service'
+import Overrides from '../../api/serviceOverrides'
 
 const ServiceSection = (props) => {
 
@@ -23,28 +24,31 @@ const ServiceSection = (props) => {
                 </div>
                 <div className="row">
 
-                    {Services.map((service, sitem) => (
+                    {Services.map((service, sitem) => {
+                        const merged = { ...service, ...(Overrides[service.slug] || {}) };
+                        return (
                         <div className="col-lg-4 col-md-6 col-12" key={sitem}>
                             <div className="wpo-service-item">
                                 <Link href={`/service/${service.slug}`}>
                                     <div className="wpo-service-img">
-                                        <img src={service.sImg} alt="" />
+                                        <img src={merged.sImg} alt="" />
                                     </div>
                                 </Link>
                                 <div className="wpo-service-text">
                                     <h2>
                                         <Link href={`/service/${service.slug}`}>
-                                            <span>{service.sTitle}</span>
+                                            <span>{merged.sTitle}</span>
                                         </Link>
                                     </h2>
-                                    <p>{service.description}</p>
+                                    <p>{merged.description}</p>
                                     <Link href={`/service/${service.slug}`} className="read-more">
                                         <span>READ MORE <i className="fa fa-angle-double-right" aria-hidden="true"></i></span>
                                     </Link>
                                 </div>
                             </div>
                         </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
         </section>

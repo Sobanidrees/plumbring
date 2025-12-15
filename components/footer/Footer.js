@@ -16,8 +16,14 @@ const Footer = (props) => {
             <div className="footer-cta">
                 <div className="container">
                     <div className="footer-cta-inner">
-                        <h3>Need a plumber today?</h3>
-                        <Link href="/schedule-service" className="theme-btn">Schedule Service</Link>
+                        <div className="cta-copy">
+                            <h3>Need a plumber today?</h3>
+                            <p>Same‑day service, upfront pricing, and clean, respectful work.</p>
+                        </div>
+                        <div className="cta-actions">
+                            <Link href="/schedule-service" className="theme-btn">Schedule Service</Link>
+                            <Link href="tel:7148635486" className="theme-btn-s2 alt">Call 714‑863‑5486</Link>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -27,7 +33,7 @@ const Footer = (props) => {
                         <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div className="widget about-widget">
                                 <div className="logo widget-title">
-                                    <img src='/images/logo2.png' alt="blog" />
+                                    <img className="footer-logo" src='/images/logo2.png' alt="MB Plumbing logo" />
                                 </div>
                                 <p>Trusted local experts for residential and commercial plumbing. Fast, friendly, and guaranteed.</p>
                                 <ul>
@@ -72,15 +78,12 @@ const Footer = (props) => {
                         <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div className="widget link-widget">
                                 <div className="widget-title">
-                                    <h3>Quick Links</h3>
+                                    <h3>Popular Services</h3>
                                 </div>
                                 <ul>
-                                    <li><Link href="/about"><span>About Us</span></Link></li>
-                                    <li><Link href="/residential"><span>Residential</span></Link></li>
-                                    <li><Link href="/commercial"><span>Commercial</span></Link></li>
-                                    <li><Link href="/pricing"><span>Pricing</span></Link></li>
-                                    <li><Link href="/service"><span>Services</span></Link></li>
-                                    <li><Link href="/contact"><span>Contact</span></Link></li>
+                                    {Services.slice(0,6).map((svc) => (
+                                        <li key={svc.slug}><Link href={`/service/${svc.slug}`}><span>{svc.sTitle}</span></Link></li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
