@@ -1,0 +1,82 @@
+.wpo-marketing-banner{
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+  position: relative;
+}
+.wpo-marketing-banner .banner-copy h1{
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+}
+.wpo-marketing-banner .banner-copy p{
+  color: #4b5b78;
+  margin: 0 0 10px;
+}
+.wpo-marketing-banner .trust{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin: 8px 0 16px;
+  padding: 0;
+  color: #0b3a7a;
+  font-weight: 800;
+}
+.wpo-marketing-banner .trust .check{ display:inline-flex; margin-right:6px; }
+.wpo-marketing-banner .banner-cta{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:12px; }
+.wpo-marketing-banner .banner-cta .theme-btn-s2.alt{
+  background: #ffffff;
+  color: #0b1a2b;
+  border: 1px solid #cfe0ff;
+  font-weight: 800;
+}
+.wpo-marketing-banner .service-chips{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.wpo-marketing-banner .service-chips .chip{
+  display:inline-block;
+  background:#eef4ff;
+  border:1px solid #d6e4ff;
+  color:#1b57c0;
+  font-weight:800;
+  border-radius:999px;
+  padding:8px 12px;
+  font-size:13px;
+}
+.wpo-marketing-banner .banner-media .media-card{
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 38px rgba(0,0,0,0.12);
+}
+.wpo-marketing-banner .banner-media img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit: cover;
+}
+.wpo-marketing-banner .media-badges{
+  position:absolute;
+  left:12px;
+  bottom:12px;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.wpo-marketing-banner .media-badges .badge{
+  background: rgba(0,0,0,0.75);
+  color:#fff;
+  border-radius:999px;
+  font-weight:800;
+  font-size:12px;
+  padding:6px 10px;
+}
+@media(max-width:991px){
+  .wpo-marketing-banner .banner-copy h1{ font-size:32px; }
+}
+@media(max-width:767px){
+  .wpo-marketing-banner .banner-copy h1{ font-size:28px; }
+  .wpo-marketing-banner .banner-cta .theme-btn, .wpo-marketing-banner .banner-cta .theme-btn-s2{ width:100%; }
+  .wpo-marketing-banner .service-chips .chip{ font-size:12px; }
+}

@@ -51,6 +51,15 @@ const MobileMenu = () => {
 
     const [openId, setOpenId] = useState(0);
     const [menuActive, setMenuState] = useState(false);
+    React.useEffect(() => {
+        const cls = 'mobilemenu-open';
+        if (menuActive) {
+            document.body.classList.add(cls);
+        } else {
+            document.body.classList.remove(cls);
+        }
+        return () => document.body.classList.remove(cls);
+    }, [menuActive]);
 
     const ClickHandler = () => {
         window.scrollTo(10, 0);

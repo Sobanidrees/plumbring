@@ -43,7 +43,7 @@ const Header = (props) => {
                                                 src={props.Logo || "/images/logo.png"}
                                                 alt="Plumbring logo"
                                                 fill
-                                                sizes="(max-width: 991px) 200px, 240px"
+                                                sizes="(max-width: 991px) 220px, 280px"
                                                 priority
                                                 style={{ objectFit: 'contain' }}
                                             />

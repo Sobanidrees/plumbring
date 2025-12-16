@@ -172,6 +172,11 @@
             }
         }
     }
+    .wpo-team-wrap .row{ display:flex; flex-wrap:wrap; }
+    .wpo-team-wrap .row > div{ display:flex; }
+    .wpo-team-wrap .wpo-team-item{ display:flex; flex-direction:column; height:100%; }
+    .wpo-team-item .wpo-team-text{ flex:1 1 auto; display:flex; flex-direction:column; }
+    .wpo-team-item .actions{ margin-top:auto; }
 }
 
 
@@ -779,26 +784,42 @@ wpo-projects
 .wpo-team-section{
     position: relative;  
     z-index: 1;
-    padding-bottom: 100px;
-    background: $section-bg-color;
+    padding-bottom: 80px;
+    background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
 
     @media(max-width:991px){
-       padding-bottom: 80px;
+       padding-bottom: 70px;
     }
     @media(max-width:767px){
-       padding-bottom: 70px;
+       padding-bottom: 60px;
     }
 
     .wpo-team-wrap{
         .wpo-team-item{
-            margin-bottom: 30px;
+            margin-bottom: 24px;
             background: $white;
-            border-radius: 50px;
+            border-radius: 18px;
+            box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform .25s ease, box-shadow .25s ease;
+            &:hover{ transform: translateY(-4px); box-shadow: 0 14px 32px rgba(0,0,0,0.12); }
             .wpo-team-img{
                 position: relative;
-                border-radius: 50px;
+                border-radius: 0;
                 overflow: hidden;
-                aspect-ratio: 1 / 1; // keep all team images square
+                aspect-ratio: 1 / 1;
+                .availability{
+                    position: absolute;
+                    left: 12px;
+                    top: 12px;
+                    background: #0ea5e9;
+                    color: #fff;
+                    font-weight: 800;
+                    font-size: 12px;
+                    padding: 6px 10px;
+                    border-radius: 999px;
+                    box-shadow: 0 6px 16px rgba(14,165,233,.25);
+                }
                 &:before{
                     position: absolute;
                     left: 0;
@@ -806,43 +827,43 @@ wpo-projects
                     width: 100%;
                     height: 100%;
                     content: "";
-                    background: $dark-gray;
-                    opacity: 0;
+                    background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.25) 100%);
+                    opacity: 1;
                     transition: all .3s;
-                    border-radius: 50px;
+                    border-radius: 0;
                 }
                 img{
                     width: 100%;
                     height: 100%;
-                    object-fit: fill; // crop to fill the square container
+                    object-fit: cover;
+                    object-position: center;
                     display: block;
-                    border-radius: 50px;
+                    border-radius: 0;
+                    transition: transform .3s ease;
                 }
+                &:hover img{ transform: scale(1.03); }
 
                 ul{
                     list-style: none;
                     display: flex;
                     justify-content: center;
-                    margin-top: 10px;
+                    margin-top: 0;
                     position: absolute;
                     left: 50%;
-                    top: 50%;
-                    transform: translate(-50%,-50%);
+                    bottom: 14px;
+                    transform: translateX(-50%);
 
                     li{
                         margin:0 6px;
                         transition: all .3s;
-                        margin-top: -40px;
-                        opacity: 0;
-                        visibility: hidden;
+                        opacity: 1;
+                        visibility: visible;
 
                         &:nth-child(2){
                             transition: all .4s;
-                            margin-top: -70px;
                         }
                         &:nth-child(3){
                             transition: all .5s;
-                            margin-top: -100px;
                         }
 
                         a{
@@ -850,7 +871,7 @@ wpo-projects
                             width: 40px;
                             height: 40px;
                             line-height: 43px;
-                            background: $white;
+                            background: rgba(255,255,255,0.85);
                             border-radius: 50%;
                             color: $dark-gray;
                             text-align: center;
@@ -865,10 +886,10 @@ wpo-projects
             }
 
             .wpo-team-text{
-                padding: 35px;
+                padding: 20px;
 
                 @media(max-width:1400px){
-                    padding:35px 20px;
+                    padding:20px 16px;
                 }
 
                 span{
@@ -897,24 +918,34 @@ wpo-projects
                         }
                     }
                 }
+                .badges{
+                    list-style: none; display: flex; gap: 8px; flex-wrap: wrap; margin: 6px 0 8px; padding: 0;
+                }
+                .badges li{
+                    background: #eef4ff; border: 1px solid #d6e4ff; color: #1b57c0; font-weight: 800; border-radius: 999px; padding: 6px 10px; font-size: 12px;
+                }
+                .actions{ margin-top: 8px; }
+                .actions .theme-btn-s2.alt{
+                    background: #ffffff; color: #0b1a2b; border: 1px solid #cfe0ff; font-weight: 800; padding: 8px 12px; border-radius: 10px;
+                }
+                .specialties{
+                    list-style: none; display: flex; gap: 8px; flex-wrap: wrap; margin: 4px 0 8px; padding: 0;
+                }
+                .specialties li{
+                    background: rgba(27,87,192,0.08); border: 1px solid #d6e4ff; color: #0b3a7a; font-weight: 700; border-radius: 999px; padding: 6px 10px; font-size: 12px;
+                }
+                .social-inline{ display: none; }
+                .social-inline ul{ list-style: none; display: flex; gap: 8px; padding: 0; }
+                .social-inline a{ display:inline-block; width:36px; height:36px; line-height:38px; text-align:center; border-radius:999px; background:#eef4ff; color:#0b1a2b; }
                 
             }
 
-            &:hover{
-                .wpo-team-img{
-                    &:before{
-                        opacity: .5;
-                    }
-                    ul{
-                        li{
-                            margin-top: 0;
-                            opacity: 1;
-                            visibility: visible;
-                        }
-                    }
-                }
-            }
+            
         }
+    }
+    @media(max-width:767px){
+        .wpo-team-item .wpo-team-img ul{ display: none; }
+        .wpo-team-item .social-inline{ display: block; margin-top: 8px; }
     }
 }
 
