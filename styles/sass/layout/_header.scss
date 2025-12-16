@@ -223,6 +223,11 @@
 	position: relative;
 }
 
+/* Hide emergency banner when mobile menu is open */
+.mobilemenu-open .wpo-emergency-banner{
+	display: none !important;
+}
+
 
 
 .wpo-site-header {
@@ -1752,8 +1757,8 @@
 
   .brand-logo {
     position: relative;
-    height: 100px; // default header logo height (increased)
-    width: 240px; // container width to preserve aspect ratio with object-fit
+    height: 120px; // default header logo height (enhanced)
+    width: 280px; // container width to preserve aspect ratio with object-fit
     // Modern card styling for the logo container
     background: #ffffff;
     border: 1px solid rgba(0,0,0,0.06);
@@ -1765,7 +1770,7 @@
 }
 
 .fixed-navbar.active .wpo-site-header .navbar-header .navbar-brand .brand-logo {
-  height: 72px; // slightly smaller when sticky header is active
+  height: 88px; // slightly smaller when sticky header is active
   // Keep presence while sticky without looking heavy
   box-shadow: 0 4px 14px rgba(0,0,0,0.06);
   transform: translateY(0);
@@ -1773,8 +1778,8 @@
 
 @media(max-width: 991px) {
   .wpo-site-header .navbar-header .navbar-brand .brand-logo {
-    height: 76px;
-    width: 200px;
+    height: 84px;
+    width: 220px;
     border-radius: 12px;
     padding: 6px;
   }
@@ -1782,8 +1787,8 @@
 
 @media(max-width: 575px) {
   .wpo-site-header .navbar-header .navbar-brand .brand-logo {
-    height: 64px;
-    width: 170px;
+    height: 76px;
+    width: 200px;
     border-radius: 12px;
     padding: 6px;
   }

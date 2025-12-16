@@ -1,0 +1,93 @@
+.wpo-cta-section{
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+}
+.wpo-cta-section .cta-box{
+  border: 10px solid #f59e0b;
+  border-radius: 26px;
+  padding: 10px;
+  background: transparent;
+}
+.wpo-cta-section .cta-box .row > .text-center{
+  background: #1f3a8a;
+  background: linear-gradient(180deg, #1f3a8a 0%, #1f3190 100%);
+  border-radius: 18px;
+  padding: 36px 24px;
+  color: #eaf0ff;
+}
+.wpo-cta-section .wpo-section-title h2{
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+.wpo-cta-section .wpo-section-title p{
+  color: #c6d4ff;
+  margin: 0 auto 12px;
+  max-width: 720px;
+}
+.wpo-cta-section .trust{
+  margin-top: 4px;
+  color: #dbe4ff;
+  font-weight: 700;
+}
+.wpo-cta-section .trust .check{ display:inline-flex; margin-right:6px; }
+.wpo-cta-section .btns ul li .theme-btn{
+  background: #f59e0b;
+  border: 1px solid #f59e0b;
+  color: #0b1a2b;
+  font-weight: 800;
+  padding: 14px 26px;
+  border-radius: 10px;
+}
+.wpo-cta-section .btns ul li .theme-btn-s2{
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #ffffff;
+  font-weight: 800;
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+.wpo-cta-section .btns ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.wpo-cta-section .btns ul li{
+  display: flex;
+}
+.wpo-cta-section .btns ul li .btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+}
+.wpo-cta-section .cta-inline .theme-btn-s2.alt{
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #ffffff;
+  font-weight: 800;
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+.wpo-cta-section .cta-inline{
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+.wpo-cta-section .cta-inline .cta-note{
+  color: #dbe4ff;
+  font-weight: 700;
+}
+@media(max-width:767px){
+  .wpo-cta-section .btns ul{ flex-direction: column; gap: 8px; }
+  .wpo-cta-section .btns ul li{ width: 100%; }
+  .wpo-cta-section .btns ul li .btn{ width: 100%; }
+  .wpo-cta-section .cta-inline{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .wpo-cta-section .cta-inline .theme-btn-s2.alt{
+    width: 100%;
+  }
+}
