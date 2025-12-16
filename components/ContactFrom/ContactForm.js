@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import SimpleReactValidator from 'simple-react-validator';
+import { toast } from 'react-toastify'
 
 
 const ContactForm = () => {
@@ -14,6 +15,7 @@ const ContactForm = () => {
     const [validator] = useState(new SimpleReactValidator({
         className: 'errorMessage'
     }));
+    const [submitting, setSubmitting] = useState(false)
     const changeHandler = e => {
         setForms({ ...forms, [e.target.name]: e.target.value })
         if (validator.allValid()) {
@@ -23,19 +25,32 @@ const ContactForm = () => {
         }
     };
 
-    const submitHandler = e => {
+    const submitHandler = async e => {
         e.preventDefault();
-        if (validator.allValid()) {
-            validator.hideMessages();
-            setForms({
-                name: '',
-                email: '',
-                subject: '',
-                phone: '',
-                message: ''
-            })
-        } else {
+        if (!validator.allValid()) {
             validator.showMessages();
+            toast.error('Please complete the form correctly')
+            return
+        }
+        setSubmitting(true)
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(forms)
+            })
+            const data = await res.json()
+            if (res.ok && data.ok) {
+                toast.success('Aap ki request submit ho gai — email confirm ho gaya')
+                setForms({ name: '', email: '', subject: '', phone: '', message: '' })
+                validator.hideMessages();
+            } else {
+                toast.error('Unable to submit at the moment')
+            }
+        } catch (err) {
+            toast.error('Network error, try again later')
+        } finally {
+            setSubmitting(false)
         }
     };
 
@@ -108,7 +123,9 @@ const ContactForm = () => {
                 </div>
             </div>
             <div className="submit-area">
-                <button type="submit" className="theme-btn">Submit Now</button>
+                <button type="submit" className="theme-btn" disabled={submitting}>
+                    {submitting ? 'Submitting...' : 'Submit Now'}
+                </button>
             </div>
         </form >
     )

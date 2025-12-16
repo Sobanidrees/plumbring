@@ -9,8 +9,6 @@ import WhyChoose from '../components/WhyChoose/WhyChoose';
 import FunFact from '../components/FunFact/FunFact';
 import ProjectSection from '../components/ProjectSection/ProjectSection';
 import ServiceAreas from '../components/ServiceAreas/ServiceAreas';
-import CTA from '../components/CTA/CTA';
-import TeamSection from '../components/TeamSection/TeamSection';
 import Scrollbar from '../components/scrollbar/scrollbar';
 import Appointment from '../components/Appointment/Appointment';
 import Footer from '../components/footer/Footer';
@@ -40,8 +38,6 @@ const HomePage = (props) => {
             <ServiceAreas />
             <FunFact />
             <ProjectSection />
-            <TeamSection />
-            <CTA />
             <Appointment />
             <Testimonial />
             <FinancingSection />

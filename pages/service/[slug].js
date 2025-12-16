@@ -81,7 +81,6 @@ const ServiceSinglePage = ({ serviceDetails }) => {
                                 </div>
                                 <div className="service-cta">
                                     <Link href="/schedule-service" className="theme-btn">Schedule Service</Link>
-                                    <Link href="/quick-quote" className="theme-btn-s2 alt">Get Free Estimate</Link>
                                 </div>
                             </div>
                             <div className="wpo-faq-section">
