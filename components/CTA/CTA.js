@@ -35,7 +35,7 @@ const CTA = () => {
               <div className="btns mt-3">
                 <ul className="d-flex justify-content-center gap-3 list-unstyled">
                   <li>
-                    <Link href="/schedule-service" className="btn theme-btn">Schedule Service</Link>
+                    <Link href="/schedule-service" className="btn theme-btn" onClick={(e)=>{e.preventDefault(); window.dispatchEvent(new CustomEvent('open-schedule-stepper', {detail:{}}));}}>Schedule Service</Link>
                   </li>
                   <li>
                     <Link href="/contact" className="btn theme-btn-s2">Get a Quote</Link>

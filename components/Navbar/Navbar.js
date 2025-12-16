@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Header/Header";
+import ScheduleStepperModal from "../ScheduleStepper/ScheduleStepperModal";
 
 export default function Navbar(props) {
   const [scroll, setScroll] = React.useState(0);
@@ -16,6 +17,7 @@ export default function Navbar(props) {
   return (
     <div className={className}>
         <Header hclass={props.hclass} Logo={props.Logo} topbarNone={props.topbarNone}/>
+        <ScheduleStepperModal />
     </div>
   ); 
 }

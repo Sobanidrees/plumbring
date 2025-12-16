@@ -21,7 +21,7 @@ const Footer = (props) => {
                             <p>Same‑day service, upfront pricing, and clean, respectful work.</p>
                         </div>
                         <div className="cta-actions">
-                            <Link href="/schedule-service" className="theme-btn">Schedule Service</Link>
+                            <Link href="/schedule-service" className="theme-btn" onClick={(e)=>{e.preventDefault(); window.dispatchEvent(new CustomEvent('open-schedule-stepper', {detail:{}}));}}>Schedule Service</Link>
                             <Link href="tel:7148635486" className="theme-btn-s2 alt">Call 714‑863‑5486</Link>
                         </div>
                     </div>

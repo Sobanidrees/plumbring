@@ -1,0 +1,36 @@
+.schedule-stepper-overlay{
+  position: fixed; inset: 0; background: rgba(0,0,0,0.55);
+  display: grid; place-items: center; z-index: 10000;
+}
+.schedule-stepper-modal{
+  width: min(960px, 92vw); background:#fff; border-radius: 18px; overflow:hidden;
+  box-shadow: 0 24px 56px rgba(0,0,0,0.25);
+}
+.schedule-stepper-modal .modal-header{
+  display:flex; align-items:center; justify-content:space-between; padding:16px 20px; background:#1f3a8a; color:#fff;
+}
+.schedule-stepper-modal .modal-header h3{ margin:0; font-weight:900; }
+.schedule-stepper-modal .modal-header .close-btn{ background:transparent; border:0; color:#fff; font-size:22px; line-height:1; cursor:pointer; }
+.schedule-stepper-modal .modal-steps{ background:#f3f7ff; padding:8px 16px; }
+.schedule-stepper-modal .steps{ display:flex; gap:10px; justify-content:center; list-style:none; margin:0; padding:0; }
+.schedule-stepper-modal .steps li{ display:flex; align-items:center; gap:6px; color:#6b778c; font-weight:700; }
+.schedule-stepper-modal .steps li .dot{ width:8px; height:8px; border-radius:999px; background:#cfe0ff; }
+.schedule-stepper-modal .steps li.active .dot{ background:#1b57c0; }
+.schedule-stepper-modal .steps li.active{ color:#0b3a7a; }
+.schedule-stepper-modal .modal-body{ padding:16px 20px; }
+.schedule-stepper-modal .grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:10px; }
+.schedule-stepper-modal .card{ display:flex; align-items:center; justify-content:center; border:1px solid #d6e4ff; background:#eef4ff; color:#0b3a7a; font-weight:800; border-radius:14px; padding:16px; height:86px; cursor:pointer; }
+.schedule-stepper-modal .card.selected{ outline:2px solid #1b57c0; background:#e8f0ff; }
+.schedule-stepper-modal .two-col{ display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-bottom:10px; }
+.schedule-stepper-modal .form-label{ font-weight:700; color:#0b3a7a; margin-bottom:6px; display:block; }
+.schedule-stepper-modal input, .schedule-stepper-modal textarea, .schedule-stepper-modal select{
+  width:100%; border:1px solid #cfe0ff; border-radius:10px; padding:10px 12px; font-size:14px;
+}
+.schedule-stepper-modal .review{ list-style:none; margin:0; padding:0; display:grid; gap:6px; }
+.schedule-stepper-modal .review li{ display:flex; gap:6px; }
+.schedule-stepper-modal .modal-footer{ display:flex; gap:8px; justify-content:flex-end; padding:12px 16px; background:#f8fbff; }
+.modal-open{ overflow:hidden; }
+@media(max-width:767px){
+  .schedule-stepper-modal .grid{ grid-template-columns: 1fr 1fr; }
+  .schedule-stepper-modal .two-col{ grid-template-columns: 1fr; }
+}
