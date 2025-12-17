@@ -114,6 +114,48 @@
 		font-size: 13px;
 	}
 
+	.topbar .contact-intro {
+		display: none;
+	}
+
+	.lan-sec {
+		display: none !important;
+	}
+
+	.topbar .contact-info ul li a {
+		font-size: 20px;
+		font-weight: 900;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient(90deg, $theme-primary-color 0%, darken($theme-primary-color, 10%) 100%);
+		padding: 12px 30px;
+		border-radius: 50px;
+		margin: 5px auto;
+		box-shadow: 0 6px 20px rgba(0,82,218,0.4);
+		border: 2px solid rgba(255,255,255,0.2);
+		width: fit-content;
+		min-width: 240px;
+		
+		i {
+			margin-right: 10px;
+			display: flex;
+			align-items: center;
+			img {
+				filter: brightness(0) invert(1); // Ensure icon is white
+				width: 20px;
+				height: auto;
+			}
+		}
+	}
+
+	.topbar .contact-info ul {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+
 }
 
 @media (max-width: 590px) {
