@@ -33,7 +33,7 @@ const Footer = (props) => {
                         <div className="col col-lg-3 col-md-6 col-sm-12 col-12">
                             <div className="widget about-widget">
                                 <div className="logo widget-title">
-                                    <img className="footer-logo" src='/images/logo.png' alt="Plumbring logo" />
+                                    <img className="footer-logo" src='/images/logo2.png' alt="MB Plumbing logo" />
                                 </div>
                                 <p>Trusted local experts for residential and commercial plumbing. Fast, friendly, and guaranteed.</p>
                                 <ul>

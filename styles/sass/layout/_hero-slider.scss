@@ -586,7 +586,21 @@ hero slider
 @media (max-width: 767px) {
 
 	.wpo-hero-section-1 {
-		height: 650px;
+		height: 500px;
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url(/images/logo.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 80%;
+			opacity: 0.1;
+			z-index: -1;
+		}
 	}
 
 	.wpo-hero-section-1 .wpo-hero-title h2 {
