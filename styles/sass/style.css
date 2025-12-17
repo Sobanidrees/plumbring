@@ -601,7 +601,7 @@ a:hover {
 
 .wpo-page-title {
   background: url(../images/page-title.jpg) no-repeat center top/cover;
-  min-height: 450px;
+  min-height: 750px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -610,7 +610,7 @@ a:hover {
 }
 @media (max-width: 767px) {
   .wpo-page-title {
-    min-height: 250px;
+    min-height: 185px;
   }
 }
 .wpo-page-title:before {
