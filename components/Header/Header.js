@@ -40,7 +40,7 @@ const Header = (props) => {
                                     <Link onClick={ClickHandler} href="/" className="navbar-brand">
                                         <div className="brand-logo">
                                             <Image
-                                                src={props.Logo || "/images/logo2.png"}
+                                                src={props.Logo || "/images/logo.png"}
                                                 alt="Plumbring logo"
                                                 fill
                                                 sizes="(max-width: 991px) 220px, 280px"
