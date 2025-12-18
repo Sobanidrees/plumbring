@@ -98,7 +98,7 @@
 	padding-top: 100px;
 
 	@media(max-width:575px) {
-		padding-top: 90px;
+		padding-top: 60px;
 	}
 
 	ul {
@@ -587,6 +587,7 @@ hero slider
 
 	.wpo-hero-section-1 {
 		height: 500px;
+        background: none !important;
 		&::after {
 			content: "";
 			position: absolute;
@@ -597,9 +598,10 @@ hero slider
 			background-image: url(/images/logo.png);
 			background-repeat: no-repeat;
 			background-position: center;
-			background-size: 80%;
-			opacity: 0.1;
+			background-size: 110%;
+			opacity: 25%;
 			z-index: -1;
+            border-radius: 0;
 		}
 	}
 
