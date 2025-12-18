@@ -73,7 +73,7 @@ const MobileMenu = () => {
             <div className={`mobileMenu ${menuActive ? "show" : ""}`}>
                 <div className="menu-header">
                     <div className="brand-mini">
-                        <img src="/images/logo.png" alt="Plumbring" />
+                        <img src="/images/logo2.png" alt="Plumbring" />
                     </div>
                     <button className="close-btn" aria-label="Close menu" onClick={() => setMenuState(false)}>
                         <i className="ti-close"></i>

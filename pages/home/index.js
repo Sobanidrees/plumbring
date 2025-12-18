@@ -21,7 +21,7 @@ const HomePage = (props) => {
 
     return (
         <div>
-            <Navbar topbarBlock={'wpo-header-style-2'} Logo={'/images/logo.png'} />
+            <Navbar topbarBlock={'wpo-header-style-2'} Logo={'/images/logo2.png'} />
             <Hero />
             <Features />
             <WorkSection />
