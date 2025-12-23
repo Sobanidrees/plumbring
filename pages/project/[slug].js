@@ -32,7 +32,19 @@ const ProjectSinglePage = (props) => {
                         <div className="col-lg-8 col-md-12">
                             <div className="wpo-service-single-wrap">
                                 <div className="wpo-service-single-img">
-                                    <img src={projectDetails?.pImg} alt="" />
+                                    {projectDetails?.video ? (
+                                        <video
+                                            src={projectDetails.video}
+                                            muted
+                                            autoPlay
+                                            loop
+                                            playsInline
+                                            preload="auto"
+                                            style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 12 }}
+                                        />
+                                    ) : (
+                                        <img src={projectDetails?.pImg} alt="" />
+                                    )}
                                 </div>
 
                                 <div className="wpo-project-details-list">

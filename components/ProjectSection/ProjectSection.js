@@ -30,7 +30,19 @@ const ProjectSection = () => {
                                 <div className="grid" key={prj}>
                                     <div className="project-inner">
                                         <div className="img-holder">
-                                            <img className="img-responsive" src={project.pImg} alt="" />
+                                            {project.video ? (
+                                                <video 
+                                                    src={project.video} 
+                                                    muted 
+                                                    autoPlay 
+                                                    loop 
+                                                    playsInline 
+                                                    preload="auto"
+                                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                                />
+                                            ) : (
+                                                <img className="img-responsive" src={project.pImg} alt="" />
+                                            )}
                                             <span className={`badge-chip ${String(project.subTitle || '').toLowerCase().replace(/\s+/g, '-')}`}>
                                                 <span className="chip-icon">
                                                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none">

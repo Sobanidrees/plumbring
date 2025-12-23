@@ -2,6 +2,7 @@ const Projects = [
     {
         Id: '1',
         pImg:'/images/projects/img-1.jpg',
+        video:'/videos/video-1.mp4',
         slug:'Water-Line-Repair',
         subTitle:'Plumbing',
         title: 'Water Line Repair',
@@ -32,6 +33,7 @@ const Projects = [
     {
         Id: '4',
         pImg:'/images/projects/img-7.jpg',
+        video:'/videos/video-2.mp4',
         slug:'Water-Line-Repairs',
         subTitle:'Plumbing',
         title: 'Water Line Repair',
@@ -42,6 +44,7 @@ const Projects = [
     {
         Id: '5',
         pImg:'/images/projects/img-8.jpg',
+        video:'/videos/video-4.mp4',
         slug:'Kitchen-Plumbing',
         subTitle:'Plumbing',
         title: 'Kitchen Plumbing',
@@ -62,6 +65,7 @@ const Projects = [
     {
         Id: '7',
         pImg:'/images/projects/img-6.jpg',
+        video:'/videos/video-3.mp4',
         slug:'Accessible Clean Out',
         subTitle:'Plumbing',
         title: 'Accessible Clean Out',
