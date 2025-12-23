@@ -62,7 +62,7 @@ const Appointment = () => {
     return (
         <section className="wpo-contact-section section-padding">
             <div className="wpo-contact-img">
-                <img src='/images/contact.jpg' alt="" />
+                <img src='/images/slider/right-img.png' alt="" />
                 <VideoModal iframeSrc="https://www.youtube.com/embed/ScMzIvxBSi4" iframeTitle="Intro Video" />
             </div>
             <div className="wpo-contact-img-s2">

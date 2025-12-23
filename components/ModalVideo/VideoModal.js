@@ -26,15 +26,6 @@ const VideoModal = ({
 
   return (
     <div className="v-modal-area">
-      <div className="video-btn">
-        <ul>
-          <li>
-            <button className="wrap" onClick={toggleModal} aria-label="Play video">
-              <i className="fi flaticon-play"></i>
-            </button>
-          </li>
-        </ul>
-      </div>
       <div className="v-modal-wrap">
         {modal ? (
           <section
