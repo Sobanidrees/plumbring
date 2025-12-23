@@ -72,17 +72,8 @@ const ProjectSinglePage = (props) => {
                                 <div className="wpo-service-single-content">
                                     <div className="wpo-service-single-content-des">
                                         <h2>{projectDetails?.title}</h2>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                            suffered alteration in some form, by injected humour, or randomised words which don't
-                                            look even slightly believable. If you are going to use a passage of Lorem Ipsum, you
-                                            need to be sure there isn't anything embarrassing hidden in the middle.</p>
-                                        <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise.</p>
-                                        <div className="wpo-service-single-sub-img">
-                                            <ul>
-                                                <li><img src={projectDetails?.spImg1} alt="" /></li>
-                                                <li><img src={projectDetails?.spImg2} alt="" /></li>
-                                            </ul>
-                                        </div>
+                                        <p>{projectDetails?.description}</p>
+                                        <p>{projectDetails?.longDescription}</p>
                                     </div>
                                 </div>
                                 <div className="wpo-related-section">
@@ -95,20 +86,18 @@ const ProjectSinglePage = (props) => {
                                                 </div>
                                                 <div className="wpo-related-text">
                                                     <h3>Quality We Ensure</h3>
-                                                    <p>If you are going to use a passage of Lorem Ipsum, you
-                                                        need to be sure there isn't.</p>
+                                                    <p>We adhere to the highest industry standards, ensuring every repair and installation is safe, durable, and code-compliant.</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-lg-4 col-md-6 col-12">
                                             <div className="wpo-related-item">
                                                 <div className="wpo-related-icon">
-                                                    <i className="fi flaticon-medal"></i>
+                                                    <i className="fi flaticon-human"></i>
                                                 </div>
                                                 <div className="wpo-related-text">
                                                     <h3>Experienced Workers</h3>
-                                                    <p>If you are going to use a passage of Lorem Ipsum, you
-                                                        need to be sure there isn't.</p>
+                                                    <p>Our team consists of licensed, insured, and background-checked plumbers with years of hands-on experience.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -119,15 +108,14 @@ const ProjectSinglePage = (props) => {
                                                 </div>
                                                 <div className="wpo-related-text">
                                                     <h3>Modern Equipment Use</h3>
-                                                    <p>If you are going to use a passage of Lorem Ipsum, you
-                                                        need to be sure there isn't.</p>
+                                                    <p>We utilize advanced tools like hydro-jets and sewer cameras to diagnose and fix problems efficiently.</p>
                                                 </div>
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
-                                <Benefits />
+                                <Benefits benefits={projectDetails?.benefits} />
                             </div>
                         </div>
                         <ServiceSidebar />

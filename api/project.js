@@ -7,8 +7,15 @@ const Projects = [
         subTitle:'Plumbing',
         title: 'Water Line Repair',
         description:'High‑precision leak detection, code‑safe pipe repairs, and pressure restored — fast, clean, and guaranteed.',
+        longDescription: 'Our water line repair service tackles everything from minor leaks to major pipe bursts. We use advanced diagnostic tools to pinpoint the exact location of the issue without unnecessary digging. Our team ensures that all repairs meet local plumbing codes and are durable enough to withstand high pressure. Whether it is a copper pipe, PEX, or PVC, we have the expertise to restore your water supply quickly and efficiently.',
         spImg1:'/images/project-single/2.jpg',
         spImg2:'/images/project-single/3.jpg',
+        benefits: [
+            { title: 'Advanced Leak Detection', description: 'We locate hidden leaks quickly using acoustic and thermal technology, minimizing damage to your property.' },
+            { title: 'Trenchless Repair Options', description: 'Save your lawn and driveway with our non-invasive pipe repair solutions.' },
+            { title: 'Long-Term Warranty', description: 'Rest easy knowing our repairs are backed by industry-leading guarantees.' },
+            { title: '24/7 Emergency Service', description: 'Water lines don\'t wait for business hours, and neither do we.' },
+        ]
     },
     {
         Id: '2',
@@ -17,8 +24,15 @@ const Projects = [
         subTitle:'Plumbing',
         title: 'Basement Plumbing',
         description:'Dry, dependable basements — sump pumps, backflow prevention, and moisture‑safe rough‑ins done right.',
+        longDescription: 'Basements are prone to flooding and moisture issues, which is why our basement plumbing services are designed to keep your home dry and safe. We install and repair sump pumps, backflow preventers, and drainage systems to manage water effectively. Additionally, we handle rough-ins for new basement bathrooms or laundry rooms, ensuring that all plumbing is properly vented and graded for optimal performance.',
         spImg1:'/images/project-single/2.jpg',
         spImg2:'/images/project-single/3.jpg',
+        benefits: [
+            { title: 'Flood Prevention', description: 'Keep your basement dry with properly installed sump pumps and backflow valves.' },
+            { title: 'Space Optimization', description: 'Smart layout designs for basement bathrooms and laundry areas.' },
+            { title: 'Code Compliance', description: 'All installations meet local building codes for safety and resale value.' },
+            { title: 'Moisture Control', description: 'Proper venting and drainage to prevent mold and mildew growth.' },
+        ]
     },
     // {
     //     Id: '3',
@@ -38,8 +52,15 @@ const Projects = [
         subTitle:'Plumbing',
         title: 'Water Line Repair',
         description:'Goodbye low pressure and hidden leaks — durable replacements with neat finishes that last.',
+        longDescription: 'Dealing with low water pressure or unexplained wet spots in your yard? It might be time for a water line repair or replacement. We specialize in minimally invasive techniques to replace aging water lines, ensuring better flow and cleaner water. Our team takes care to preserve your landscaping and property while delivering a long-lasting solution to your water supply problems.',
         spImg1:'/images/project-single/2.jpg',
         spImg2:'/images/project-single/3.jpg',
+        benefits: [
+            { title: 'Improved Water Pressure', description: 'Replace corroded pipes to restore strong, consistent flow.' },
+            { title: 'Cleaner Water', description: 'Eliminate rust and contaminants from aging galvanized lines.' },
+            { title: 'Durable Materials', description: 'We use high-grade copper or PEX for longevity and reliability.' },
+            { title: 'Fast Turnaround', description: 'Most replacements are completed in a single day.' },
+        ]
     },
     {
         Id: '5',
@@ -49,8 +70,15 @@ const Projects = [
         subTitle:'Plumbing',
         title: 'Kitchen Plumbing',
         description:'Effortless flow in the heart of your home — sinks, faucets, and disposals installed to perfection.',
+        longDescription: 'The kitchen is the heart of the home, and its plumbing needs to work flawlessly. We provide comprehensive kitchen plumbing services, including faucet installation, sink repair, garbage disposal replacement, and dishwasher hookups. Whether you are upgrading your fixtures or fixing a stubborn leak, our plumbers ensure that everything is installed correctly and functions smoothly for years to come.',
         spImg1:'/images/project-single/2.jpg',
         spImg2:'/images/project-single/3.jpg',
+        benefits: [
+            { title: 'Leak-Free Fixtures', description: 'Precision installation prevents costly water damage under cabinets.' },
+            { title: 'Modern Upgrades', description: 'Install the latest touchless faucets and deep farm sinks.' },
+            { title: 'Appliance Integration', description: 'Seamless hookups for dishwashers, ice makers, and filtration systems.' },
+            { title: 'Clog Prevention', description: 'Proper drain venting and disposal setup to keep things flowing.' },
+        ]
     },
     {
         Id: '6',
@@ -59,8 +87,15 @@ const Projects = [
         subTitle:'Plumbing',
         title: 'Gas Line Services',
         description:'Safe, code-compliant gas line installation and repair for your home appliances and heating systems.',
+        longDescription: 'Gas line work requires precision and safety, and our certified technicians are fully equipped to handle it. We install gas lines for stoves, dryers, water heaters, and outdoor fire pits. If you suspect a leak, we perform rigorous pressure testing and immediate repairs to keep your home safe. Trust us for all your gas piping needs, ensuring compliance with all safety regulations.',
         spImg1:'/images/project-single/2.jpg',
         spImg2:'/images/project-single/3.jpg',
+        benefits: [
+            { title: 'Safety First', description: 'Rigorous pressure testing to ensure zero leaks.' },
+            { title: 'Certified Technicians', description: 'Licensed experts trained specifically in gas systems.' },
+            { title: 'Versatile Connections', description: 'Hookups for ranges, dryers, heaters, and outdoor grills.' },
+            { title: 'Code Adherence', description: 'Full compliance with strict gas piping regulations.' },
+        ]
     },
     {
         Id: '7',
@@ -70,8 +105,15 @@ const Projects = [
         subTitle:'Plumbing',
         title: 'Accessible Clean Out',
         description:'Future‑proof service access — easy cleanouts that make maintenance quicker, safer, and cheaper.',
+        longDescription: 'Accessible cleanouts are essential for easy sewer maintenance and clog removal. We install ground-level cleanouts that allow for quick access to your main sewer line, eliminating the need to drag equipment through your home or climb onto the roof. This simple upgrade makes future plumbing services faster, cleaner, and less expensive, providing peace of mind for homeowners.',
         spImg1:'/images/project-single/2.jpg',
         spImg2:'/images/project-single/3.jpg',
+        benefits: [
+            { title: 'Easy Maintenance', description: 'Quick access for hydro-jetting and snake services.' },
+            { title: 'Cost Savings', description: 'Reduce labor time and costs for future blockage removals.' },
+            { title: 'Minimal Mess', description: 'Avoid bringing dirty equipment inside your home.' },
+            { title: 'Preventative Care', description: 'Simplifies regular inspections to catch issues early.' },
+        ]
     },
     // {
     //     Id: '8',
