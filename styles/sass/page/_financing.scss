@@ -11,13 +11,25 @@
     background: transparent;
   }
   .financing-inner {
-    background: #1f3a8a;
-    background: linear-gradient(180deg, #1f3a8a 0%, #1f3190 100%);
+    background: #1f3a8a url(/images/workers.png) no-repeat center ;
+    background-size: 100% auto;
+    background-blend-mode: overlay;
     border-radius: 18px;
     padding: 40px 30px 80px;
     color: #eaf0ff;
     position: relative;
     z-index: 1;
+
+    @media (max-width: 991px) {
+      background-size: cover;
+      background-position: center center;
+    }
+
+    @media (max-width: 767px) {
+      background-size: cover;
+      background-position: center center;
+      padding-bottom: 60px;
+    }
   }
   .header h2 {
     color: #ffffff;
