@@ -7,7 +7,6 @@ import About from '../../components/about/about';
 import FunFact from '../../components/FunFact/FunFact';
 import Testimonial from '../../components/Testimonial/Testimonial';
 import ServiceSection from '../../components/ServiceSection/ServiceSection';
-import TeamSection from '../../components/TeamSection/TeamSection';
 
 const AboutPage = (props) => {
 
@@ -18,7 +17,6 @@ const AboutPage = (props) => {
             <About/>
             <ServiceSection/> 
             <FunFact/> 
-            <TeamSection/> 
             <Testimonial/> 
             <Footer/>
             <Scrollbar />

@@ -9,7 +9,7 @@ const About = (props) => {
                     <div className="row align-items-center">
                         <div className="col-lg-5 col-md-12 col-12">
                             <div className="wpo-about-img">
-                                <img src='/images/about.jpg' alt=""/>
+                                <img src='/images/slider/right-img.png' alt=""/>
                             </div>
                         </div>
                         <div className="col-lg-7 col-md-12 col-12">
@@ -19,16 +19,11 @@ const About = (props) => {
                                         In Plumbing Service</h2>
                                 </div>
                                 <div className="wpo-about-content-inner">
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable and going through the cites of the word in classical literature, discovered the
-                                        undoubtable source. Lorem Ipsum comes from sections.</p>
-                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                                        in a piece of classical Latin literature from 45 BC, making it over 2000 years
-                                        old consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                        ut labore et dolore magna aliqua.</p>
+                                    <p>We are a trusted, locally owned plumbing company dedicated to providing top-quality service to our community. With over two decades of experience, we handle everything from emergency repairs to comprehensive installations with professionalism and care.</p>
+                                    <p>Our team of licensed and insured experts is committed to delivering fast, reliable solutions. We pride ourselves on upfront pricing, excellent workmanship, and customer satisfaction. Whether it's a leaky faucet or a major renovation, you can count on us to get the job done right.</p>
                                     <div className="signeture">
-                                        <h4>Brubaker Nilka</h4>
-                                        <p>Vertex Chambers, CEO</p>
-                                        <span><img src='/images/signeture.png' alt=""/></span>
+                                        <h4>Mike</h4>
+                                        <p>MB Plumbing Services, CEO</p>
                                     </div>
                                 </div>
                             </div>
