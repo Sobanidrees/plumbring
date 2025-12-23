@@ -43,7 +43,7 @@ export default function FinancingSection() {
                 <div className="callout">
                   <h4>Same‑Day Plumbing — Book Online</h4>
                   <p>Upfront pricing. Licensed, bonded & insured technicians.</p>
-                  <Link href="/schedule-service" className="theme-btn">
+                  <Link href="#" className="theme-btn" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new CustomEvent('open-schedule-stepper')); }}>
                     Schedule Service
                   </Link>
                 </div>
