@@ -19,6 +19,7 @@ import QuickQuote from '../components/QuickQuote/QuickQuote';
 import StickyActionBar from '../components/StickyActionBar/StickyActionBar';
 import WhatsAppFloat from '../components/WhatsAppFloat/WhatsAppFloat';
 import FinancingSection from '../components/FinancingSection/FinancingSection';
+import CommercialBrands from '../components/CommercialBrands/CommercialBrands';
 
 
 
@@ -35,6 +36,7 @@ const HomePage = (props) => {
             <HomeServicesGrid />
             <PromotionsSection />
             <WhyChoose />
+            <CommercialBrands />
             <ServiceAreas />
             <FunFact />
             <ProjectSection />
