@@ -5,11 +5,6 @@ const CommercialBrands = () => {
   // Brand logos from commercial-plumbing folder
   const brands = [
     {
-      name: 'AMC Theatres',
-      logo: '/images/commercial-plumbing/amc-theatres-cinema-film-kerasotes-theatres-television-fortnite-john-wick.jpg',
-      alt: 'AMC Theatres'
-    },
-    {
       name: 'Best Buy',
       logo: '/images/commercial-plumbing/logo-best-buy-brand-bouy-thumbnail.jpg',
       alt: 'Best Buy'
@@ -38,6 +33,56 @@ const CommercialBrands = () => {
       name: 'Victoria\'s Secret',
       logo: '/images/commercial-plumbing/victorias-secret-logo-11562973433mq5umxcwsd.png',
       alt: 'Victoria\'s Secret'
+    },
+    {
+      name: 'Brand 1',
+      logo: '/images/commercial-plumbing/new1.png',
+      alt: 'Brand 1'
+    },
+    {
+      name: 'Brand 2',
+      logo: '/images/commercial-plumbing/new2.png',
+      alt: 'Brand 2'
+    },
+    {
+      name: 'Brand 3',
+      logo: '/images/commercial-plumbing/new3.png',
+      alt: 'Brand 3'
+    },
+    {
+      name: 'Brand 4',
+      logo: '/images/commercial-plumbing/new4.png',
+      alt: 'Brand 4'
+    },
+    {
+      name: 'Brand 5',
+      logo: '/images/commercial-plumbing/new5.png',
+      alt: 'Brand 5'
+    },
+    {
+      name: 'Brand 6',
+      logo: '/images/commercial-plumbing/new6.png',
+      alt: 'Brand 6'
+    },
+    {
+      name: 'Brand 7',
+      logo: '/images/commercial-plumbing/new7.png',
+      alt: 'Brand 7'
+    },
+    {
+      name: 'Brand 8',
+      logo: '/images/commercial-plumbing/new8.png',
+      alt: 'Brand 8'
+    },
+    {
+      name: 'Brand 9',
+      logo: '/images/commercial-plumbing/new9.png',
+      alt: 'Brand 9'
+    },
+    {
+      name: 'Brand 10',
+      logo: '/images/commercial-plumbing/new10.png',
+      alt: 'Brand 10'
     }
   ];
 
