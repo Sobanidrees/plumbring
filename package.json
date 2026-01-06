@@ -3,7 +3,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "postbuild": "next-sitemap",
+    "sitemap": "next-sitemap"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -39,6 +41,7 @@
     "simple-react-validator": "^1.5.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.6",
-    "swiper": "^8.4.5"
+    "swiper": "^8.4.5",
+    "next-sitemap": "^4.0.0"
   }
 }
